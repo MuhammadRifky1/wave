@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: DAGGERSQUARE;
+    src: url(font/DAGGERSQUARE.otf);
+}
+
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.clear-fix {
+    clear: both;
+}
+
+body {
+    background: #ddd;
+}
+
+.preloader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 700px;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.box-preloader {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    background: #ff9800;
+    border-radius: 50%;
+    opacity: .5;
+    position: absolute;
+
+}
+
+.title-section {
+    background: #ff9800;
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+}
+
+.title-container {
+    font-family: daggersquare;
+    font-size: 70px;
+    color: #eceff1;
+}
+
+.title-container strong {
+    text-shadow: 10px 5px 20px rgb(20, 20, 20);
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #ff9800;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    
+    width: 75%;
+    height: 65vh;
+}
+.left-content{
+    float:left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-content{
+    float:left;
+    width: 56%;
+    height: 100%;
+    margin-left: 3%;
+    padding: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.equation {
+    width: 50%;
+    height: 30%;
+    background:lightblue;
+
+}
+
+.box-desc {
+    width: 100%;
+    height: 90%;
+    background: #fff;
+    font-size: 16px;
+    color: #414141;
+}
+
+.button-paginate {
+    border: none;
+    background: #fff;
+    width: 75px;
+    height: 40px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 7px;
+    color: #414141;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.button-paginate:hover {
+    background: #ddd;
+}
+
+.events-section__main-event {
+    height: 50px;
+    width: 100%;
+    background-color: red;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .not-visible {
+    display: none;
+  }

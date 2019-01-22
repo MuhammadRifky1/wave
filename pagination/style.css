@@ -1,0 +1,13 @@
+.events-section__main-event {
+    height: 50px;
+    width: 100%;
+    background-color: red;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .not-visible {
+    display: none;
+  }
