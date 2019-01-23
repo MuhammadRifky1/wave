@@ -87,8 +87,9 @@ body {
 
 .content {
     
-    width: 75%;
+    width: 85%;
     height: 65vh;
+    background: cyan;
 }
 .left-content{
     float:left;
@@ -114,17 +115,22 @@ body {
 .equation {
     width: 50%;
     height: 30%;
-    background:lightblue;
+    background:lightcoral;
+    position: relative;
+    left: -10px;
+    margin: 0 5px 5px 0;
 
 }
 
 .box-desc {
     width: 100%;
-    height: 90%;
+    height: 95%;
     background: #fff;
     font-size: 16px;
     color: #414141;
     padding-left: 10px;
+    border-radius: 25px;
+    
 }
 
 
@@ -170,3 +176,40 @@ body {
     float: right;
     position: relative;
 }
+
+.box-q-list {
+    width: 85%;
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.box-q {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 15px;
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+    font-size: 18px;
+    color: #414141;
+}
+
+ul li {
+    border-bottom: 1px #414141 solid;
+    padding: 15px;
+}
+
+ul li:hover {
+    background: lightslategray;
+    color: #fcfcfc;
+}
+
+#desc-q {
+    margin: 10px;
+    font-size: 18px;
+}
+

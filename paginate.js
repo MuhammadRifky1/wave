@@ -2,11 +2,14 @@
 var pageList = new Array();
 var currentPage = 1;
 var numberPerPage = 1;
+var asd = 1;
 var events = Array.prototype.slice.call(document.querySelectorAll(".events-section__main-event"));
+var page_span = document.getElementById('page_num');
 
 function getNumberOfPages() {
   return Math.ceil(events.length / numberPerPage);
 }
+
 
 function nextPage() {
   currentPage += 1;
@@ -35,6 +38,8 @@ function loadList() {
     pageList[i].classList.add("not-visible"); // make the old list invisible
   }
   pageList = events.slice(begin, end);
+  var pagesheet = begin +1;
+  page_span.innerHTML =  pagesheet + "/" + events.length;
   drawList();
   check();
 }

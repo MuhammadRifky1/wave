@@ -25,15 +25,15 @@
     <div class="container">
         <div class="content">
             <div class="left-content">
-                    <img src="scientist.jpg" width="400px"/>
+                    <img src="scientist.jpg" width="300vw"/>
             </div>
             <div class="right-content">
                 <div class="box-desc">
+                    <div class="equation pull-left"></div>
                     <p>
-                        <div class="equation pull-left"></div>
-                        
                         <div id="1" class="events-section__main-event">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, omnis officiis quidem ea corporis repudiandae pariatur doloremque molestias alias minus sunt? Quas suscipit at distinctio voluptates soluta quasi! Perferendis, magni!Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, omnis officiis quidem ea corporis repudiandae pariatur doloremque molestias alias minus sunt? Quas suscipit at distinctio voluptates soluta quasi! Perferendis, magni!Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, omnis officiis quidem ea corporis repudiandae pariatur doloremque molestias alias minus sunt? Quas suscipit at distinctio voluptates soluta quasi! Perferendis, magni!Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, omnis officiis quidem ea corporis repudiandae pariatur doloremque molestias alias minus sunt? Quas suscipit at distinctio voluptates soluta quasi! Perferendis, magni!Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, omnis officiis quidem ea corporis repudiandae pariatur doloremque molestias alias minus sunt? Quas suscipit at distinctio voluptates soluta quasi! Perferendis, magni!Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, omnis officiis quidem ea corporis repudiandae pariatur doloremque molestias alias minus sunt? Quas suscipit at distinctio voluptates soluta quasi! Perferendis, magni!Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, omnis officiis quidem ea corporis repudiandae pariatur doloremque molestias alias minus sunt? Quas suscipit at distinctio voluptates soluta quasi! Perferendis, magni!Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, omnis officiis quidem ea corporis repudiandae pariatur doloremque molestias alias minus sunt? Quas suscipit at distinctio voluptates soluta quasi! Perferendis, magni!</div>
                         
+                        <div id="5" class="events-section__main-event not-visible">dua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua </div>
                         <div id="5" class="events-section__main-event not-visible">dua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua duadua </div>
                     
                     </p>
@@ -46,7 +46,7 @@
                 <input type="button" class="button-paginate" id="next" onclick="nextPage()" value="next" />
                 <input type="button" class="button-paginate" id="previous" onclick="previousPage()" value="previous" />
                 <input type="button" class="button-paginate" id="last" onclick="lastPage()" value="last" />
-                <div class="hal pull-right">1/3</div>
+                <div class="hal pull-right"><span id="page_num">asd</span></div>
             </div>
             
         </div>
