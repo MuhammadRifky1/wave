@@ -27,3 +27,6 @@ function DestroyPreloader(){
 }
 
 window.onload = blow();
+
+//ScrollMagic 
+
