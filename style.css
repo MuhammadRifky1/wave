@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat:400,700|Gochi+Hand');
 * {
     margin: 0px;
     padding: 0px;
@@ -59,7 +60,7 @@ body {
 
 .title-container {
     font-family: daggersquare;
-    font-size: 70px;
+    font-size: 5vw;
     color: #eceff1;
     display: flex;
     flex-direction: column;
@@ -67,27 +68,29 @@ body {
     align-items: center;
     width: 100%;
     height: 70%;
+
 }
 .header {
     position: absolute;
-    top: 0px;
+    top: -2vh;
     width: 100%;
-    height: 13vh;
+    height: 150px;
+    font-size: 14px;
+    transition: top .5s ease-out !important;
     
+}
+.header:hover {
+    font-size: 18px;
+    top: 0;
 }
 
 
 .nav {
-    width: 40%;
+    width: 50%;
     height: 100%;
-    padding: 45px 20px ;
+    padding: 35px 20px ;
 
 }
-
-
-
-
-
 
 
 .nav-box{
@@ -113,7 +116,6 @@ body {
 .nav-box a {
     text-decoration: none;
     color: #fcfcfc;
-    font-size: 18px;
     margin: 10px;
     font-family: daggersquare;
     text-shadow: 3px 3px 2px rgb(20, 20, 20);
@@ -128,8 +130,8 @@ body {
     -moz-background-size: cover;
      -o-background-size: cover;
     background-size: cover;
+    overflow: hidden;
     position: absolute;
-    z-index: 2;
     bottom: 0px;
     left: -75px;
     
@@ -145,8 +147,8 @@ body {
     border-radius: 50%;
     border: 10px solid lightcoral;
     position: absolute;
-    left: 480px;
-    top: 20px;
+    left: 21.5vw;
+    display: none;
 }
 
 .container{
@@ -286,3 +288,101 @@ ul li:hover {
     font-size: 18px;
 }
 
+.transition-container {
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    
+}
+
+h1{
+    font-size: 10vw;
+    font-family: 'Caveat', cursive;
+
+}
+
+h1 span{
+    display: block;
+    float: left;
+    animation: animate 4s linear infinite;
+    margin: 0 5px;
+    padding: 0;
+    position: relative;
+    color: #111;
+}
+
+h1 span:nth-child(1){
+animation-delay: 0s;
+}
+h1 span:nth-child(2){
+animation-delay: .25s;
+}
+h1 span:nth-child(2){
+animation-delay: .5s;
+}
+h1 span:nth-child(3){
+animation-delay: .75s;
+}
+h1 span:nth-child(4){
+animation-delay: 1s;
+}
+h1 span:nth-child(5){
+animation-delay: 1.25s;
+}
+h1 span:nth-child(6){
+animation-delay: 1.5s;
+}
+h1 span:nth-child(7){
+animation-delay: 1.75s;
+}
+
+h1 span:nth-child(9){
+animation-delay: 2s;
+}
+h1 span:nth-child(10){
+animation-delay: 2.25s;
+}
+h1 span:nth-child(11){
+animation-delay: 2.5s;
+}
+h1 span:nth-child(12){
+animation-delay: 2.75s;
+}
+h1 span:nth-child(13){
+animation-delay: 3s;
+}
+h1 span:nth-child(14){
+animation-delay: 3.25s;
+}
+h1 span:nth-child(15){
+animation-delay: 3.5s;
+}
+h1 span:nth-child(16){
+animation-delay: 3.75s;
+}
+
+@keyframes animate {
+0%, 100%{
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #ff9800,
+    0 0 20px #ff9800,
+    0 0 40px #ff9800,
+    0 0 80px #ff9800,
+    0 0 120px #ff9800,
+    0 0 200px #ff9800,
+    0 0 300px #ff9800,
+    0 0 400px #ff9800   ;
+}
+5%, 95%{
+    color: #111;
+    filter: blur(0px);
+    text-shadow: none;
+}
+} 
