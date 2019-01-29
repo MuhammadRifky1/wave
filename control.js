@@ -50,7 +50,10 @@
 
 
 // window.onload = blow();
-       
+  
+TweenMax.staggerTo(".circle",3, {scale: 10}, 0.5);
 
 // //ScrollMagic 
+
+
 
