@@ -1,5 +1,12 @@
 var controller = new ScrollMagic.Controller();
 var materi = document.getElementById("scrollIntoView");
+var circle = TweenMax.staggerTo(".circle",3, {scale: 15, onComplete: destroy_circle}, 0.3);
+var circle_alpha = TweenMax.staggerFrom(".circle",1.5, {alpha:0 }, 0.3);
+function destroy_circle(){
+  for(i = 0; i < 7; i++){
+      document.getElementsByClassName("circle")[i].style.display = "none";
+  }
+}
 
 materi.addEventListener('click', function(){
   var element = document.getElementById('Materi');
@@ -42,13 +49,25 @@ new ScrollMagic.Scene({
   .addTo(controller);
 
 
-  // fade-in
-  new ScrollMagic.Scene({
-    triggerElement: '#Materi',
-    triggerHook: .1   
-  })
-  .setTween('#text-reveal', { ease: Power1.easeOut, y: 0})
-  .addTo(controller);
+
+
+new ScrollMagic.Scene({
+  triggerElement: 'onLeave',
+  triggerHook: 0.1,
+  duration: "50%",
+})
+.setTween(circle)
+.addTo(controller);
+
+
+
+// fade-in
+new ScrollMagic.Scene({
+  triggerElement: '#Materi',
+  triggerHook: .1   
+})
+.setTween('#text-reveal', { ease: Power1.easeOut, y: 0})
+.addTo(controller);
 
 // // var load = new ScrollMagic.Scene({
 // //     triggerHook: 0,

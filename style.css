@@ -3,10 +3,15 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+     
 }
 @font-face {
     font-family: DAGGERSQUARE;
     src: url(font/DAGGERSQUARE.otf);
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .pull-left {
@@ -192,6 +197,7 @@ animation-delay: 3.75s;
     align-items: center;
     width: 100%;
     height: 70%;
+    z-index: 100;
 
 }
 .header {
@@ -246,18 +252,30 @@ animation-delay: 3.75s;
 
 
 .tower {
-    width: 45vw;
-    height: 59vh;
+    width: 600px;
+    height: 400px;
     background: url("fixed.png"); 
     -webkit-background-size: cover;
     -moz-background-size: cover;
      -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
     position: absolute;
     bottom: 0px;
-    left: -75px;
     
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 7px solid #e67e22;
+    position: absolute;
+    left: 50%; 
+    z-index:10;
+}
+
+.of-hide{
+    overflow: hidden;
+    overflow-x: hidden; 
 }
 
 
@@ -267,18 +285,7 @@ animation-delay: 3.75s;
 }
 
 
-.circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 10px solid #e67e22;
-    position: absolute;
-    left: 55%;
-    top: 2%;
-    z-index: 20;
 
-    
-}
 
 .container{
     width: 100%;
@@ -368,7 +375,7 @@ animation-delay: 3.75s;
 }
 
 .visible {
-    display: inline !important;
+    display: inline-block !important;
 }
 
 .hal {
