@@ -505,10 +505,20 @@ ul li:hover {
 
 
 .quiz {
-    width: 75%;
+    width: 90%;
     height: 50vh;
-    padding-left: 10%;
-    background: lightcoral;
+}
+
+.gradient-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    background-image: url("icon/ptp_grain.png"), 
+    -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
 }
 
 
