@@ -31,6 +31,7 @@ svg {
 
 body {
     background: #ddd;
+    counter-reset: count;
 }
 
 .circle1 {
@@ -214,7 +215,7 @@ animation-delay: 3.75s;
     
 }
 .header:hover {
-    font-size: 18px;
+    font-size: 16px;
     top: 0;
 }
 
@@ -266,6 +267,7 @@ animation-delay: 3.75s;
     position: absolute;
     bottom: 0px;
     left: -2%;
+    
     
 }
 .circle {
@@ -342,7 +344,7 @@ animation-delay: 3.75s;
     
 }
 .not-visible {
-    display: none;
+    display: none !important;
 }
 
 .visible {
@@ -365,20 +367,38 @@ animation-delay: 3.75s;
 }
 
 ul {
-    text-decoration: none;
-    list-style: none;
+    
     font-size: 18px;
     color: #414141;
+    width: 40%;
+    float: left;
+    margin: 20px;
+}
+
+.text-footer {
+    float: left;
+    color: #fff;
+    width: 90%;
+    
+}
+
+.text-footer p {
+    margin-left: 5%;
 }
 
 ul li {
-    border-bottom: 1px #414141 solid;
-    padding: 15px;
+    border-bottom: 1px #fff solid;
+    padding: 10px;
 }
 
 ul li:hover {
-    background: lightslategray;
     color: #fcfcfc;
+    font-size: 21px;
+}
+li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
 }
 
 #desc-q {
@@ -480,12 +500,15 @@ ul li:hover {
 .container-quiz{
     width: 100%;
     height: 100vh;
-    background: lightblue;
+    background: #b3e5fc;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    display: none;
 }
 
 .quiz {
@@ -501,10 +524,6 @@ ul li:hover {
 }
 
 .gradient-overlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100vh;
     background-image: url("icon/ptp_grain.png"), 
@@ -535,7 +554,26 @@ ul li:hover {
     -webkit-animation: squiggly-anim 0.3s linear infinite;
             animation: squiggly-anim 0.3s linear infinite;
 
-    z-index: 10;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    
+
+}
+
+.tower2 {
+    width: 600px;
+    height: 450px;
+    background: url("finish.png") center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+     -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    left: -25%;
+    bottom: -5%;
+
+
 }
 
 
@@ -594,8 +632,7 @@ ul li:hover {
 }
 
 .arrow-down {
-    width: 60%;
-    padding-left: 10%;
+    width: 45%;
 
 }
 
@@ -604,6 +641,7 @@ ul li:hover {
     width: 200px;
     height: 320px;
     background-size: cover;
+    margin-left: 15%;
 }
 
 .scrolling-text {
@@ -622,13 +660,85 @@ ul li:hover {
 }
 
 .flex-wrapper {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
 }
 
+.dott-wrapper {
+    width: 25%;
+    height: 5%;
+    padding-top: 6%;
+}
 
+.dotts {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 7% 3% 3% 5%;
+    position: relative;
+}
+
+.arrow-mask {
+    width: 100%;
+    height: 100%;
+    background: #ef5350;
+    position: relative;
+}
+
+.sound-wrapper {
+    position: relative;
+    left: 10vw;
+    top: 10vh;
+    width: 150px;
+
+}
+
+.container-quiz img {
+    width: 31px;
+    image-rendering: pixelated;
+    float: left;
+    
+}
+
+.container-quiz p {
+    font-size: 18px;
+    color: #fff;
+    float: left;
+    margin-left: 10px;
+}
+
+footer {
+    background: #1f1e1e;
+    width: 100%;
+    height:40vh;
+    position: relative;
+    z-index: 100;
+    padding-top: 3vh;
+    padding-left: 2vw;
+}
+
+.left-side {
+    width: 45%;
+    height: 90%;
+
+}
+
+.right-side {
+    width: 50%;
+    height: 90%;
+    margin-left: 2vw;
+}
+
+.right-side img {
+    width: 200px;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+}
 
 
 

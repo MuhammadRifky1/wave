@@ -51,14 +51,12 @@
                         <span  id="scrollIntoView">MATERI</span>
                     </div>
                     <div class="nav-box pull-right">
-                            <span  id="scrollIntoView">MATERI</span>
+                            <span  id="scrollIntoView">SOAL</span>
                     </div>
                     <div class="nav-box pull-right">
-                            <span  id="scrollIntoView">MATERI</span>
+                            <span  id="scrollIntoView">ABOUT US</span>
                     </div>
-                    <div class="nav-box pull-right">
-                            <span  id="scrollIntoView">MATERI</span>
-                    </div>
+
                     
                 </div>
                 <div class="clear-fix"></div>
@@ -185,51 +183,65 @@
 
     <div class="clear-fix"></div>
 
-    <div class="quiz-wrapper">
-        <div class="wave-transition"></div>
-        <div class="flex-wrapper">
-            <div class="arrow-down" id="arrd">
-                
-                <div class="arrow-down-img pull-left"></div>
-                <div class="scrolling-text pull-left" id="scrolling-text">
-                    <span>K</span>
-                    <span>e</span>
-                    <span>e</span>
-                    <span>p</span>
-                    <span>&nbsp;</span>
-                    <span>S</span>
-                    <span>c</span>
-                    <span>r</span>
-                    <span>o</span>
-                    <span>l</span>
-                    <span>l</span>
-                    <span>i</span>
-                    <span>n</span>
-                    <span>g</span>
+    <div class="quiz-wrapper" id="qw1">
+            <div class="wave-transition"></div>
+            <div class="flex-wrapper">
+                <div class="arrow-down" id="arrd">
+                    <div class="arrow-down-img pull-left">
+                        <div class="arrow-mask"></div>
+                    </div>
+                    <div class="scrolling-text pull-left" id="scrolling-text">
+                        <span>K</span>
+                        <span>e</span>
+                        <span>e</span>
+                        <span>p</span>
+                        <span>&nbsp;</span>
+                        <span>S</span>
+                        <span>c</span>
+                        <span>r</span>
+                        <span>o</span>
+                        <span>l</span>
+                        <span>l</span>
+                        <span>i</span>
+                        <span>n</span>
+                        <span>g</span>
+                        <div class="dott-wrapper pull-left">
+                            <div class="dotts pull-left"></div>
+                            <div class="dotts pull-left"></div>
+                            <div class="dotts pull-left"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>    
+        
     </div>
-    <div class="quiz-wrapper">
-            <!-- <div class="container-quiz">
+    <div class="quiz-wrapper" id="qw2">
+            <div class="container-quiz" id="quiz-show">
                 <div class="gradient-overlay">
-                    <div class="quiz">
-                        <div class="toCenter">
-                            <div class="question pull-left">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis impedit molestias, amet omnis, esse harum nulla delectus eum ullam porro, quam eveniet ratione temporibus fuga quisquam? Deserunt at voluptatibus magni.</p>
-                            </div>
-                            <div class="bg-circle pull-left">
-                                    
-                            </div>
-                            <div class="main-answers pull-left">
-                                <div class="answer">Answer Number One</div>
-                                <div class="answer">Answer Number One</div>
-                                <div class="answer">Answer Number ONE</div>
+                    <div class="sound-wrapper">
+                        <img src="icon/bgIcon2.png" alt="music">
+                        <p>Sound On</p>
+                    </div>
+                    <div class="flex-wrapper">
+                        <div class="quiz">
+                            <div class="toCenter">
+                                <div class="question pull-left">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis impedit molestias, amet omnis, esse harum nulla delectus eum ullam porro, quam eveniet ratione temporibus fuga quisquam? Deserunt at voluptatibus magni.</p>
+                                </div>
+                                <div class="bg-circle pull-left" id="bgc">
+                                    <div class="tower2"></div>
+                                </div>
+                                <div class="main-answers pull-left">
+                                    <div class="answer" id="answer" onclick="change_circle()">Answer Number One</div>
+                                    <div class="answer" id="answer">Answer Number One</div>
+                                    <div class="answer" id="answer">Answer Number ONE</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
+            
     </div>
     
     <svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
@@ -256,7 +268,31 @@
             </filter>
         </defs>
     </svg>
-
+    <footer>
+        <div class="left-side pull-left">
+            <div class="text-footer pull-left">
+                <ul>
+                    <li><a href="#">ScrollMagic.io</a></li>
+                    <li><a href="#">GSAP [ Greenshock ]</a></li>
+                    <li><a href="#">Javscript</a></li>
+                    <li><a href="#">HTML5</a></li>
+                    <li><a href="#">CSS3</a></li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aperiam quos perspiciatis exercitationem earum debitis autem fugit, iure dolores amet quisquam facere, unde nihil illum voluptate ab numquam rerum ad.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nobis minus veniam consequuntur libero repellendus autem provident. Enim tempore numquam dolore ipsa, eius minima harum reiciendis maiores recusandae ratione placeat.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, delectus cupiditate rerum, fuga commodi asperiores necessitatibus reprehenderit alias laboriosam provident quidem vitae qui explicabo accusantium quisquam. Debitis rem excepturi quasi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aperiam quos perspiciatis exercitationem earum debitis autem fugit, iure dolores amet quisquam facere, unde nihil illum voluptate ab numquam rerum ad.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nobis minus veniam consequuntur libero repellendus autem provident. Enim tempore numquam dolore ipsa, eius minima harum reiciendis maiores recusandae ratione placeat.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, delectus cupiditate rerum, fuga commodi asperiores necessitatibus reprehenderit alias laboriosam 
+                </p>
+            </div>
+        </div>
+        <div class="right-side pull-left">
+                <iframe width="60%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                </iframe>
+                <img src="milenium.png" alt="asd">
+        </div>
+    </footer>
 
 
     

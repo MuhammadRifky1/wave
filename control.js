@@ -13,7 +13,6 @@
 
 
 
-
     
     
 //     setTimeout(function wait_light(){
@@ -51,37 +50,30 @@
 
 // window.onload = blow();
   
-const globals = {
-    audio: true
-}
 
-// Audio
-buttonClick = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/Buttonclick.mp3');
-featured = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/featured.mp3');
-slideSlow = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/slideSlow.mp3');
-wrong = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/Wrong.mp3');
-bg = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/retrogameloop.mp3');
 
-wrong.volume = 0.2;
-// ## Create a function to play our sounds
-function playSound(sound) {
-    if (globals.audio) {
-        sound.play(); // Play sound
+
+
+$('.options_sf').click(function(){
+    if(sfxSwitch == 0) {
+        globals.audio = false
+        sfxSwitch = 1;
+        $(this).css('opacity','0.4')
+    } else {
+        globals.audio = true
+        sfxSwitch = 0;
+        $(this).css('opacity','1')
     }
-}
-
-function playAudio(sound) {
-
-    sound.loop = true;
-    sound.volume = 0.7;
-    sound.play(); // Play sound
-
-}
 
 
 
 
+// $('body').css('background', scenes[progress - 1].backgroundColor);
+//     circle.css('background', scenes[progress].backgroundColor);
+//     circle.find('.circles').css('background', scenes[progress].backgroundColor);
 
+
+    
 
 
 
