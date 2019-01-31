@@ -3,8 +3,7 @@ var materi = document.getElementById("scrollIntoView");
 var tm = new TimelineMax()
 
 
-var circle = tm.staggerTo(".circle",3, {scale: 20, onComplete: destroy_circle}, 0.3);
-var circle_alpha = TweenMax.staggerFrom(".circle",10, { alpha:0 }, 0.3);
+var circle = tm.staggerTo(".circle",3, {scale: 20, onComplete: destroy_circle, opacity: 1}, 0.3);
 function destroy_circle(){
   for(i = 0; i < 7; i++){
       document.getElementsByClassName("circle")[i].style.display = "none";
@@ -16,7 +15,7 @@ function destroy_circle(){
       for(i = 0; i < 7; i++){
       document.getElementsByClassName("circle")[i].style.display = "inline-block";
       }
-    },1000)
+    },500)
 
   
 }
@@ -32,22 +31,22 @@ element.scrollIntoView({behavior: "smooth", block: "start"});
 new ScrollMagic.Scene({
   triggerElement: '#header',
   offset: 100,
-  triggerHook: 0,
+  triggerHook: 0.1,
   duration: "50%",
 })
 .setTween(circle)
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
   triggerElement: '#header',
   offset: 100,
-  triggerHook: 0,
-  duration: "50%",
+  triggerHook: 0.1,
+  duration: "90%"
 })
-.setTween(circle_alpha)
-.addIndicators()
+.setClassToggle(".circle", "visible")
 .addTo(controller);
+
+
 
 
 // paralax
@@ -90,6 +89,24 @@ new ScrollMagic.Scene({
 })
 .setTween('#toDown', {y: "100%", ease: Linear.easeNone})
 .addTo(controller);
+
+// new ScrollMagic.Scene({
+//   triggerElement: '#arrd',
+//   triggerHook: "onLeave"
+// })
+// .setClassToggle('.container-quiz', "visible")
+// .addIndicators()
+// .addTo(controller);
+
+// new ScrollMagic.Scene({
+//   triggerElement: '#arrd',
+//   triggerHook: "onLeave"
+// })
+// .setTween()
+// .addIndicators()
+// .addTo(controller);
+
+TweenMax.from(".container-quiz", 3, {y: "-100%"});
 
 
 
