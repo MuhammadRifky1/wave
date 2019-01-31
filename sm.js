@@ -106,7 +106,42 @@ new ScrollMagic.Scene({
 // .addIndicators()
 // .addTo(controller);
 
-TweenMax.from(".container-quiz", 3, {y: "-100%"});
+
+  
+  // Animation will be ignored and replaced by scene value in this example
+TweenMax.staggerFromTo('.scrolling-text span', 1,
+  {
+    scale: 1,
+  },
+  {
+    color: '#ff9800',
+    scale: 2,
+    y: -30,
+    x: 30
+  },
+  0.7
+);
+
+TweenMax.staggerFromTo('.scrolling-text span', 1,
+  {
+    color: '#ff9800',
+    scale: 2,
+    y: -30,
+    x: 30
+  },
+  {
+    scale: 1
+  },
+  0.3
+);
+
+// new ScrollMagic.Scene({
+//   triggerElement: '#scrolling-text',
+//   duration: 100
+// })
+// .setTween(tween)
+// .addTo(controller);
+  
 
 
 
