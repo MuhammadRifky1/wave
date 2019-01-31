@@ -516,7 +516,6 @@ ul li:hover {
 .quiz {
     width: 90%;
     height: 50vh;
-    background: lightcoral;
     
 }
 
@@ -524,7 +523,6 @@ ul li:hover {
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    background:yellow;
 }
 
 .gradient-overlay {
@@ -544,6 +542,8 @@ ul li:hover {
     height: 50%;
     overflow: hidden;
     margin: 15% 10% 0 0;
+    padding-top: 15px;
+    border-top: 5px dotted #fff;
 }
 
 .question p {
@@ -552,17 +552,18 @@ ul li:hover {
 
 .bg-circle {
   background: #68859b;
-  width: 300px;
-  height: 300px;
-  border-radius: 150px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
   -webkit-animation: squiggly-anim 0.3s linear infinite;
           animation: squiggly-anim 0.3s linear infinite;
 }
 
 
 .main-answers {
-    width: 33.33%;
-    padding-left: 70px;
+    width: 30%;
+    padding-left: 100px;
+
 }
 
 .answer {
