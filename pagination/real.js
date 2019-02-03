@@ -1,13 +1,13 @@
 var data = [
     {
-        question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis impedit molestias, amet omnis, esse harum nulla delectus eum ullam porro, quam eveniet ratione temporibus fuga quisquam? Deserunt at voluptatibus magnis.",
+        question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis impedit molestias, amet omnis, esse harum nulla delectus eum ullam porro,quam eveniet ratione temporibus fuga quisquam? Deserunt at voluptatibus magnis.",
         answerA: "FIRST ANSWER",
         answerB: "SECOND ANSWER",
         cnswerC: "THIRD ANSWER",
         correct: "A"
     },
     {
-        question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis impedit molestias, amet omnis, esse harum nulla delectus eum ullam porro, quam eveniet ratione temporibus fuga quisquam? Deserunt at voluptatibus magnis.",
+        question: "ini adalah pertanyaan kedua yang akan disediakan oleh programmer handal Aamiin",
         answerA: "FIRST ANSWER",
         answerB: "SECOND ANSWER",
         cnswerC: "THIRD ANSWER",
@@ -30,30 +30,38 @@ function renderQuestion() {
 
 function progressRender() {
     for(let qIndex = 0; qIndex <= lastQuestionIndex; qIndex++){
-        progress.innerHTML += "<div class='indicator' id="+ qIndex +"></div>"
+      test =   progress.innerHTML += "<div class='indicator' id="+ qIndex +"></div>"
     }
 }
 
 function answerIsCorrect(){
-    document.getElementById(runningQuestionIndex).classList.add('correct');
+    document.getElementById(runningQuestionIndex).style.backgroundColor = '#0f0';
 }
 
 function answerIsWrong(){
-    document.getElementById(runningQuestionIndex).classList.add('wrong');
+    document.getElementById(runningQuestionIndex).style.backgroundColor = '#f00';
+
 }
 
 
 function checkAnswer(answer){
-    if(quiz[runningQuestionIndex].correct == answer){
+    if(data[runningQuestionIndex].correct == answer){
         score++;
         answerIsCorrect();
     }else {
         answerIsWrong();
     }
+
+    if(runningQuestionIndex < lastQuestionIndex){
+        runningQuestionIndex++;
+        renderQuestion();
+    }
 }
 
 
-window.onload = renderQuestion();
+renderQuestion();
+progressRender();
+
 
 
 

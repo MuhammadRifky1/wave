@@ -522,8 +522,7 @@ li a {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    position: absolute;
-    z-index: 100;
+
 }
 
 .quiz {
@@ -542,22 +541,13 @@ li a {
 .indicator {
     width: 10px;
     height: 10px;
-    background: lightcoral;
+    background: #414141;
+    opacity: .7;
     border-radius: 50%;
     margin: 5px;
     float: left;
-}
-.indicator .correct {
-    
-    background: lightgreen ;
     
 }
-.indicator .wrong {
-    
-    background: red ;
-    
-}
-
 
 .toCenter{
     width: 90%;
@@ -753,6 +743,35 @@ li a {
     color: #fff;
     float: left;
     margin-left: 10px;
+}
+
+.modal-container {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0 ,0 ,0, 0.300);
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 45vw;
+    height: 65vh;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.modal-container .exit {
+    width: 40px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
 }
 
 footer {

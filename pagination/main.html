@@ -11,36 +11,41 @@
 
 </head>
 <body>
-        <div class="container-quiz" id="quiz-show">
-            <div class="gradient-overlay">
-                <div class="sound-wrapper">
-                    <img src="../icon/bgIcon2.png" alt="music">
-                    <p>Sound On</p>
-                </div>
-                <div class="flex-wrapper">
-                    <div class="quiz">
-                        <div class="toCenter">
-                            <div class="question pull-left" id="question-container"></div>
-                            <div class="bg-circle pull-left" id="bgc">
-                                <div class="tower2"></div>
-                            </div>
-                            <div class="main-answers pull-left" id="answer-container">
-                                <div class="answer" data-correct="true" id="answer" onclick="checkAnswer(this)">Answer Number One</div>
-                                <div class="answer" data-correct="false" id="answer" onclick="checkAnswer(this)">Answer Number One</div>
-                                <div class="answer" data-correct="true" id="answer" onclick="checkAnswer(this)">Answer Number ONE</div>
-                            </div>
+    <div class="container-quiz" id="quiz-show">
+        <div class="gradient-overlay">
+            <div class="sound-wrapper">
+                <img src="../icon/bgIcon2.png" alt="music">
+                <p>Sound On</p>
+            </div>
+            <div class="flex-wrapper">
+                <div class="quiz">
+                    <div class="toCenter">
+                        <div class="question pull-left" id="question-container"></div>
+                        <div class="bg-circle pull-left" id="bgc">
+                            <div class="tower2"></div>
+                        </div>
+                        <div class="main-answers pull-left" id="answer-container">
+                            <div class="answer"  id="answer" onclick="checkAnswer('A')">Answer Number One</div>
+                            <div class="answer"  id="answer" onclick="checkAnswer('B')">Answer Number One</div>
+                            <div class="answer"  id="answer" onclick="checkAnswer('C')">Answer Number ONE</div>
                         </div>
                     </div>
-                    <div class="main-indicator">
-
-                    </div>
                 </div>
-
-                
+                <div class="main-indicator" id="main-indicator">
+                    
+                </div>
             </div>
-        </div>
 
-     
+            
+        </div>
+    </div>
+
+    <div class="modal-container">
+        <div class="exit">
+            <img src="../icon/close.png" alt="exit" width="40px">
+        </div>
+        <div class="modal"></div>
+    </div>
 
        
           
