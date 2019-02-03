@@ -62,7 +62,7 @@ new ScrollMagic.Scene({
     duration: "100%",
     triggerHook: 1   
   })
-  .setTween('#mid-content', {y: "-80%", ease: Linear.easeNone})
+  .setTween('#mid-content', {y: "-60%", ease: Linear.easeNone})
   .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -139,15 +139,19 @@ new ScrollMagic.Scene({
 .addTo(controller);
 
 // animate quiz
-var quiz = TweenMax.from("#quiz-show", 1, {y: '-100%'});
+var quiz = TweenMax.from("#quiz-show", 1, {y: '-100%', onComplete: show_footer});
 new ScrollMagic.Scene({
   triggerElement: '#qw2',
   triggerHook: 0,
   reverse: false
 })
 .setTween(quiz)
-
 .addTo(controller);
+
+
+function show_footer() {
+  document.getElementById('footer').style.display = "inline-block";
+}
 
 // broke quiz container 1
 
@@ -196,7 +200,7 @@ function playAudio(sound) {
 
 new ScrollMagic.Scene({
   triggerElement: '#qw2',
-  triggerHook: 1
+  triggerHook: .6
 })
 .on('start', function(){
   playAudio(bg); 
