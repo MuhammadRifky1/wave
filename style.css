@@ -100,7 +100,7 @@ body {
     height: 100vh;
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     
 }
 
@@ -310,31 +310,40 @@ animation-delay: 3.75s;
     position: relative;
     left: 3vw;
     top: 65vh;
-      
-
 }
 .mid-content{
     float:left;
     width: 25vw;
-    height: 100vh;
-    background: #fff;
+    height: 200vh;
     position: relative;
     left: 10vw;
-    top: 100vh;
-    padding: 10px 0 10px 15px;
+    top: 90vh;
     overflow: hidden;
 }
 
 .right-content{
     float:left;
     width: 25vw;
-    height: 100vh;
-    background: #fff;
+    height: 200vh;
     position: relative;
     left: 15vw;
-    top: 90vh;
-    padding: 10px 0 10px 15px;
+    top: 80vh;
     overflow: hidden;
+}
+
+.children-content{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 10px;
+    overflow: hidden;
+    margin-top: 5%;
+}
+.children-content h2{
+    font-size: 1.3vw;
+    color: #414141;
+    font-weight: bolder;
+    margin-bottom: 10px;
 }
 
 .box-desc {
@@ -384,10 +393,12 @@ ul {
     color: #fff;
     width: 90%;
     
+    
 }
 
 .text-footer p {
     margin-left: 5%;
+    
 }
 
 ul li {
@@ -489,8 +500,9 @@ li a {
     width: 100%;
     height: 100vh;
     background: #ef5350;
-    
+    overflow: hidden;
 }
+
 .wave-transition {
     background: #ef5350;
     width: 100vw;
@@ -662,7 +674,7 @@ li a {
 }
 
 .arrow-down {
-    width: 45%;
+    width: 65%;
 
 }
 
@@ -676,6 +688,7 @@ li a {
 
 .scrolling-text {
     width: 60%;
+    height: auto;
     padding: 20% 0 0 10%;
 }
 
@@ -750,6 +763,8 @@ footer {
     z-index: 100;
     padding-top: 3vh;
     padding-left: 2vw;
+    overflow: hidden;
+    display: none;
 }
 
 .left-side {
@@ -765,7 +780,7 @@ footer {
 }
 
 .right-side img {
-    width: 200px;
+    width: 12vw;
     margin-left: 5vw;
     margin-bottom: 5vh;
 }
