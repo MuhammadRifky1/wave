@@ -5,33 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+
+
 
 </head>
 <body>
+        <div class="container-quiz" id="quiz-show">
+            <div class="gradient-overlay">
+                <div class="sound-wrapper">
+                    <img src="../icon/bgIcon2.png" alt="music">
+                    <p>Sound On</p>
+                </div>
+                <div class="flex-wrapper">
+                    <div class="quiz">
+                        <div class="toCenter">
+                            <div class="question pull-left" id="question-container"></div>
+                            <div class="bg-circle pull-left" id="bgc">
+                                <div class="tower2"></div>
+                            </div>
+                            <div class="main-answers pull-left" id="answer-container">
+                                <div class="answer" data-correct="true" id="answer" onclick="checkAnswer(this)">Answer Number One</div>
+                                <div class="answer" data-correct="false" id="answer" onclick="checkAnswer(this)">Answer Number One</div>
+                                <div class="answer" data-correct="true" id="answer" onclick="checkAnswer(this)">Answer Number ONE</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-indicator">
+
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+     
+
+       
+          
+
         
-        <input type="button" id="first" onclick="firstPage()" value="first" />
-        <input type="button" id="next" onclick="nextPage()" value="next" />
-        <input type="button" id="previous" onclick="previousPage()" value="previous" />
-        <input type="button" id="last" onclick="lastPage()" value="last" />
-        
-        <div id="1" class="events-section__main-event">1</div>
-        <div id="2" class="events-section__main-event">2</div>
-        <div id="3" class="events-section__main-event">3</div>
-        <div id="4" class="events-section__main-event">4</div>
-        <div id="5" class="events-section__main-event not-visible">5</div>
-        <div id="6" class="events-section__main-event not-visible">6</div>
-        <div id="7" class="events-section__main-event not-visible">7</div>
-        <div id="8" class="events-section__main-event not-visible">8</div>
-        <div id="9" class="events-section__main-event not-visible">9</div>
-        <div id="10" class="events-section__main-event not-visible">10</div>
-        <div id="11" class="events-section__main-event not-visible">11</div>
-        <div id="12" class="events-section__main-event not-visible">12</div>
-        <div id="13" class="events-section__main-event not-visible">13</div>
-        <div id="14" class="events-section__main-event not-visible">14</div>
-        <div id="15" class="events-section__main-event not-visible">15</div>
-        <div id="16" class="events-section__main-event not-visible">16</div>
-        <script src="config.js"></script>
+
+<script src="config.js"></script>
+<script src="real.js"></script>
+
     
 </body>
 </html>
