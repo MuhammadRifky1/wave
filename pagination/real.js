@@ -17,7 +17,8 @@ var data = [
 
 var questionParent = document.getElementById('question-container'),
     answerParent = document.getElementById('answer-container'),
-    progress = document.getElementById('main-indicator');
+    progress = document.getElementById('main-indicator'),
+    bg = document.getElementById('gauge');
 
 var lastQuestionIndex = data.length - 1;
 var runningQuestionIndex = 0;
@@ -66,7 +67,9 @@ progressRender();
 
 
 
-
+function destroyModal() {
+    document.getElementById('modal').style.display = "none";
+}
 
 
 
