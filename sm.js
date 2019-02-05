@@ -49,46 +49,58 @@ new ScrollMagic.Scene({
 
 
 
-// paralax
-new ScrollMagic.Scene({
-    triggerElement: '#paralax',
-    duration: "100%",
-    triggerHook: 1
-  })
-  .setTween('#left-content', {y: "-20%", ease: Linear.easeNone})
-  .addTo(controller);
-new ScrollMagic.Scene({
-    triggerElement: '#paralax',
-    duration: "100%",
-    triggerHook: 1   
-  })
-  .setTween('#mid-content', {y: "-60%", ease: Linear.easeNone})
-  .addTo(controller);
+//materi
+
+var horizontalSlide = new TimelineMax()
+    .to('#horizontal', 1, {x: '-20%'})
+    .to('#horizontal', 1, {x: '-40%'})
+    .to('#horizontal', 1, {x: '-60%'})
+    .to('#horizontal', 1, {x: '-80%'});
 
 new ScrollMagic.Scene({
-    triggerElement: '#paralax',
-    duration: "100%",
-    triggerHook: 1   
-  })
-  .setTween('#right-content', {y: "-50%", ease: Linear.easeNone})
-  .addTo(controller);
-
-// text-reveal
-new ScrollMagic.Scene({
-  triggerElement: '#Materi',
-  triggerHook: .1   
+  triggerElement: '#horizontal-wrapper',
+  duration: "400%",
+  triggerHook: 0
 })
-.setTween('#text-reveal', { ease: Power1.easeOut, y: 0})
+.setTween(horizontalSlide)
+.setPin('#horizontal')
 .addTo(controller);
 
-//wave
+var maskingMove = new TimelineMax()
+    .to('#masking', 1, {x: '100%'})
+    .to('#masking2', 1, {x: '100%'})
+    .to('#masking3', 1, {x: '100%'})
+    .to('#masking4', 1, {x: '100%'})
+    .to('#masking5', 1, {x: '100%'})
+    .to('#masking6', 1, {x: '100%'})
+    .to('#masking7', 1, {x: '100%'})
+    .to('#masking8', 1, {x: '100%'});
+
+
 new ScrollMagic.Scene({
-  triggerElement: '#paralax',
-  duration: "110%",
-  triggerHook: 1
+  triggerElement: '#horizontal-wrapper',
+  duration: "450%"
 })
-.setTween('#toDown', {y: "100%", ease: Linear.easeNone})
+.setTween(maskingMove)
+.addIndicators()
 .addTo(controller);
+
+for(i = 1; i <= 5; i++){
+  new ScrollMagic.Scene({
+    triggerElement: '#horizontal-wrapper',
+    duration: "400%",
+    triggerHook: 0
+  })
+  .setPin("#horizontal'++'")
+  .addTo(controller);
+}
+
+
+
+
+
+
+
 
 
 
@@ -170,42 +182,42 @@ function show_footer() {
 
 // audio 
 
-const globals = {
-  audio: true
-}
+// const globals = {
+//   audio: true
+// }
 
-// Audio
-buttonClick = new Audio('mp3/Buttonclick.mp3');
-featured = new Audio('mp3/featured.mp3');
-slideSlow = new Audio('mp3/slideSlow.mp3');
-wrong = new Audio('mp3/Wrong.mp3');
-bg = new Audio('mp3/retrogameloop.mp3');
+// // Audio
+// buttonClick = new Audio('mp3/Buttonclick.mp3');
+// featured = new Audio('mp3/featured.mp3');
+// slideSlow = new Audio('mp3/slideSlow.mp3');
+// wrong = new Audio('mp3/Wrong.mp3');
+// bg = new Audio('mp3/retrogameloop.mp3');
 
-// for button
-function playSound(sound) {
-  if (globals.audio) {
+// // for button
+// function playSound(sound) {
+//   if (globals.audio) {
 
-      sound.play(); // Play sound
-  }
-}
+//       sound.play(); // Play sound
+//   }
+// }
 
 
-function playAudio(sound) {
+// function playAudio(sound) {
 
-  sound.loop = true;
-  sound.volume = 0.7;
-  sound.play(); // Play sound
+//   sound.loop = true;
+//   sound.volume = 0.7;
+//   sound.play(); // Play sound
 
-}
+// }
 
-new ScrollMagic.Scene({
-  triggerElement: '#qw2',
-  triggerHook: .6
-})
-.on('start', function(){
-  playAudio(bg); 
-})
-.addTo(controller);
+// new ScrollMagic.Scene({
+//   triggerElement: '#qw2',
+//   triggerHook: .6
+// })
+// .on('start', function(){
+//   playAudio(bg); 
+// })
+// .addTo(controller);
 
   
 
