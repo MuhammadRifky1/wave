@@ -1,52 +1,28 @@
 var controller = new ScrollMagic.Controller();
 var materi = document.getElementById("scrollIntoView");
-var tm = new TimelineMax()
-
-
-var circle = tm.staggerTo(".circle",3, {scale: 20, onComplete: destroy_circle, opacity: 1}, 0.3);
-function destroy_circle(){
-  for(i = 0; i < 7; i++){
-      document.getElementsByClassName("circle")[i].style.display = "none";
-
-  }
-  
-    setTimeout(function(){
-      tm.restart();
-      for(i = 0; i < 7; i++){
-      document.getElementsByClassName("circle")[i].style.display = "inline-block";
-      }
-    },500)
-
-  
-}
-
-
-
 materi.addEventListener('click', function(){
   var element = document.getElementById('Materi');
 element.scrollIntoView({behavior: "smooth", block: "start"});
 });
 
-// Gelombang Elektromagnetik
+var tm = new TimelineMax()
+
+
+
+
+tm
+  .to("#line2", 1.5, {y: '-100%'})
+  .to("#line1", 1.5, {x: '-100%'})
+  .staggerTo(".circle" ,3 , {scale: 20, opacity: 1}, 0.1);
+
+
 new ScrollMagic.Scene({
-  triggerElement: '#title-text',
-  offset: 100,
-  triggerHook: 0.1,
-  duration: "50%",
+  triggerElement: '#line2',
+  triggerHook: 0
 })
-.setTween(circle)
+.setClassToggle(".circle", "not-visible")
+.addIndicators()
 .addTo(controller);
-
-new ScrollMagic.Scene({
-  triggerElement: '#header',
-  offset: 100,
-  triggerHook: 0.1,
-  duration: "90%"
-})
-.setClassToggle(".circle", "visible")
-.addTo(controller);
-
-
 
 
 //materi
@@ -85,15 +61,15 @@ new ScrollMagic.Scene({
 .addIndicators()
 .addTo(controller);
 
-for(i = 1; i <= 5; i++){
-  new ScrollMagic.Scene({
-    triggerElement: '#horizontal-wrapper',
-    duration: "400%",
-    triggerHook: 0
-  })
-  .setPin("#horizontal'++'")
-  .addTo(controller);
-}
+// for(i = 1; i <= 5; i++){
+//   new ScrollMagic.Scene({
+//     triggerElement: '#horizontal-wrapper',
+//     duration: "400%",
+//     triggerHook: 0
+//   })
+//   .setPin("#horizontal")
+//   .addTo(controller);
+// }
 
 
 
@@ -105,76 +81,6 @@ for(i = 1; i <= 5; i++){
 
 
 
-  
-
-
-var items = document.querySelectorAll('.scrolling-text span'), length = items.length;
-var duration = 0.07;
-var tl = new TimelineMax({ paused:true, repeat: -1, delay: duration * 0.5, repeatDelay: 1 });
-for (var i = 0; i < length; i += 1) {
-    tl.from(items[i], duration, {autoAlpha:0, scale:2});
-    tl.to(items[i], duration, {autoAlpha:1, scale:1,});
-}
-tl.play();
-
-var tlm = new TimelineMax({ paused:true, repeat: -1, delay: duration * 0.5});
-var items = document.querySelectorAll('.dotts'), length = items.length;
-var duration = 0.07;
-for (var i = 0; i < length; i += 1) {
-  tl.from(items[i], duration, { autoAlpha:0, top:"-20px"});
-  tl.to(items[i], duration, {autoAlpha:1, top:"0px"});
-}
-tlm.play();
-
-TweenMax.to(".arrow-mask", 1.5, {top: '100%', ease: Power1.easeNone, repeat: -1, repeatDelay: .5});
-
-new ScrollMagic.Scene({
-  triggerElement: '#arrd',
-  triggerHook: 0.3,
-  duration: "100%"
-})
-.setPin('#arrd', {pushFollowers	: false})
-.addTo(controller);
-
-
-//quiz
-
-
-// show quiz
-new ScrollMagic.Scene({
-  triggerElement: '#qw2',
-  triggerHook: 0,
-  reverse: false
-})
-.setClassToggle('.container-quiz', "visible")
-
-.addTo(controller);
-
-// animate quiz
-var quiz = TweenMax.from("#quiz-show", 1, {y: '-100%', onComplete: show_footer});
-new ScrollMagic.Scene({
-  triggerElement: '#qw2',
-  triggerHook: 0,
-  reverse: false
-})
-.setTween(quiz)
-.addTo(controller);
-
-
-function show_footer() {
-  document.getElementById('footer').style.display = "inline-block";
-}
-
-// broke quiz container 1
-
-// new ScrollMagic.Scene({
-//   triggerElement: '#qw2',
-//   triggerHook: 0,
-//   reverse: false
-// })
-// .setClassToggle('#qw1', "not-visible")
-// .addIndicators()
-// .addTo(controller);
 
 
 
