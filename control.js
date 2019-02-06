@@ -48,7 +48,7 @@ var ball = document.getElementById('circle1'),
 
 
 
-window.onload = blow();
+//window.onload = blow();
 
 
 // disabling scroll

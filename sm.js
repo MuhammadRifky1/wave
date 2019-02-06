@@ -17,7 +17,7 @@ tm
 
 
 new ScrollMagic.Scene({
-  triggerElement: '#line2',
+  triggerElement: '#wave-trigger',
   triggerHook: 0
 })
 .setClassToggle(".circle", "not-visible")
@@ -58,7 +58,6 @@ new ScrollMagic.Scene({
   duration: "450%"
 })
 .setTween(maskingMove)
-.addIndicators()
 .addTo(controller);
 
 // for(i = 1; i <= 5; i++){

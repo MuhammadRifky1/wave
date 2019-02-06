@@ -216,7 +216,8 @@ animation-delay: 3.75s;
     align-items: center;
     width: 100%;
     height: 70%;
-    z-index: 100;
+    z-index: 7;
+    position: relative;
 
 }
 .header {
@@ -280,7 +281,6 @@ animation-delay: 3.75s;
     background-size: cover;
     position: absolute;
     bottom: 0px;
-    left: -2%;
     z-index: 7;
     
     
@@ -292,7 +292,7 @@ animation-delay: 3.75s;
     border: 7px solid #e67e22;
     position: absolute;
     left: 43%; 
-    z-index:10;
+    z-index: 10;
 }
 
 .of-hide{
@@ -306,7 +306,7 @@ animation-delay: 3.75s;
     text-shadow: 10px 5px 20px rgb(20, 20, 20);
 }
 
-.horizontal-scroll-wrapper {
+.contal-scroll-wrapper {
     width: 100%;
     height: 100vh;
 
@@ -349,6 +349,16 @@ animation-delay: 3.75s;
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
+    
+}
+
+.straightline-wrapper-vertc {
+    width: 200px;
+    height: 400px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    
 }
 
 .straightline {
@@ -359,12 +369,12 @@ animation-delay: 3.75s;
 }
 
 .straightline-wrapper{
-    width: 32.7vw;
+    width: 25vw;
     height: 200px;
     margin: 0 auto;
     position: absolute;
     bottom: 257px;
-    left: 17vw;
+    left: 24.5vw;
     overflow: hidden;
     z-index: 1;
 }
@@ -375,8 +385,37 @@ animation-delay: 3.75s;
     width: 100%;
     height: 100%;
 }
-
-
+.vertical {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #ff9800;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.content-wrap-ver {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 10000;
+    
+    
+}
+.straight-vertical {
+    width: 200px;
+    height: 50%;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    
+}
 
 
 .waveline-wrapper {
@@ -406,7 +445,7 @@ animation-delay: 3.75s;
     width: 400px;
     height: 500px;
     position: absolute;
-    z-index: 21;
+    z-index: 100;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -423,6 +462,7 @@ animation-delay: 3.75s;
     width: 100%;
     height: 100%;
 }
+
   
 
 .not-visible {
@@ -551,12 +591,7 @@ li a {
     transform: translateY(40px);
 }
 
-.quiz-wrapper {
-    width: 100%;
-    height: 100vh;
-    background: #ef5350;
-    overflow: hidden;
-}
+
 
 .wave-transition {
     background: #ef5350;
@@ -872,7 +907,6 @@ footer {
   border-radius: 5px;
   transition: all 0.2s ;
   text-decoration: none;
-  
   padding: 5px;
 
 }
@@ -881,6 +915,7 @@ footer {
     font-family: 'Press Start 2P';
   color: #FFF;
   font-size: .8vw;
+  line-height: 25px;
 
 }
 
