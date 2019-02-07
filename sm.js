@@ -154,6 +154,3 @@ new ScrollMagic.Scene({
 //     colorTrigger: "red"
 // })
 // .addTo(controller);
-
-
-

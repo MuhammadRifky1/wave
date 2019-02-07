@@ -488,43 +488,6 @@ animation-delay: 3.75s;
     border-radius: 15px;
 }
 
-ul {
-    
-    font-size: 18px;
-    color: #414141;
-    width: 40%;
-    float: left;
-    margin: 20px;
-}
-
-.text-footer {
-    float: left;
-    color: #fff;
-    width: 90%;
-    
-    
-}
-
-.text-footer p {
-    margin-left: 5%;
-    
-}
-
-ul li {
-    border-bottom: 1px #fff solid;
-    padding: 10px;
-}
-
-ul li:hover {
-    color: #fcfcfc;
-    font-size: 21px;
-}
-li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #fff;
-}
-
 #desc-q {
     margin: 10px;
     font-size: 18px;
@@ -594,13 +557,14 @@ li a {
 
 
 .wave-transition {
-    background: #ef5350;
+    background: #ff9800;
     width: 100vw;
     height: 2vw;
     -webkit-animation: squiggly-anim 0.3s linear infinite;
             animation: squiggly-anim 0.3s linear infinite;
     position: relative;
     top: -1vw;
+    left: -3;
 }
 
 .container-quiz{
@@ -865,36 +829,6 @@ li a {
     cursor: pointer;
 }
 
-footer {
-    background: #1f1e1e;
-    width: 100%;
-    height:40vh;
-    position: relative;
-    z-index: 100;
-    padding-top: 3vh;
-    padding-left: 2vw;
-    overflow: hidden;
-    display: none;
-}
-
-.left-side {
-    width: 45%;
-    height: 90%;
-
-}
-
-.right-side {
-    width: 50%;
-    height: 90%;
-    margin-left: 2vw;
-}
-
-.right-side img {
-    width: 12vw;
-    margin-left: 5vw;
-    margin-bottom: 5vh;
-}
-
 .button {
   position: relative;
   width: 16vw;
@@ -939,6 +873,83 @@ footer {
 
 .btnColor {
     background-image: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+
+footer {
+    background: #fff;
+    border: 2px solid #f29409;
+    width: 100%;
+    height: 280px;
+    padding: 10px;
+    color: #414141;
+    
+}
+
+
+.one-third {
+    width: 15vw;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.one-third h3 {
+    color: #ff9800;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.one-third ul {
+    list-style: square outside url("icon/arrow.png");
+    margin-left: 30px;
+    font-size: 18px;
+    border-right: 1px solid #ff9800;
+}
+
+
+
+
+.one-third ul li {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.one-third ul li:hover {
+    font-size: 19px;
+}
+
+.one-double {
+    width: 30vw;
+    height: 85%;
+    border-bottom: 1px solid #ff9800;
+    margin-left: 15px;
+}
+
+.one-double .one-third ul {
+    border: none;
+    
+}
+
+.one-double .one-third .border-line {
+    border-left: 1px solid #ff9800;
+    
+}
+
+.one-double .one-third .border-line h2 {
+    text-align: center;   
+}
+
+.right-side {
+    width: 46vw;
+    height: 100%;
+    margin-left: 50px;
+}
+
+.right-side img {
+    width: calc(100% - 70%);
+    margin-left: 50px;
+    margin-bottom: 25px;
 }
 
 
