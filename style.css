@@ -831,25 +831,26 @@ animation-delay: 3.75s;
 
 .button {
   position: relative;
-  width: 16vw;
-  height: 20vh;
+  min-width: 16vw;
+  height: auto;
   padding: 0;
   margin: 10px 20px 10px 0;
-  font-weight: 600;
   text-align: center;
   line-height: 50px;
   border-radius: 5px;
   transition: all 0.2s ;
   text-decoration: none;
   padding: 5px;
+  
 
 }
 
 .button p {
     font-family: 'Press Start 2P';
   color: #FFF;
-  font-size: .8vw;
+  font-size: 1.5vw;
   line-height: 25px;
+  margin: 25px 0;
 
 }
 
@@ -859,8 +860,8 @@ animation-delay: 3.75s;
     justify-content: center;
     align-items: center;
     background: #ff9800;
-    width: 100%;
-    height: 100%;
+    padding: 25px 25px;
+    
 }
 
 
@@ -950,6 +951,7 @@ footer {
     width: calc(100% - 70%);
     margin-left: 50px;
     margin-bottom: 25px;
+
 }
 
 
@@ -999,3 +1001,10 @@ footer {
             filter: url("#squiggly-4");
 }
 }
+
+
+
+
+
+
+
