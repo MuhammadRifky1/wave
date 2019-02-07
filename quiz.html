@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>QUIZ!</title>
     <link rel="stylesheet" href="quiz/style.css">
     <link rel="stylesheet" href="style.css">
 
@@ -12,13 +12,20 @@
 
 </head>
 <body>
+    <div class="modal-container-sound" id="startQuiz">
+        <h1>Click Anywhere to start</h1>
+    </div>
+
     <div class="container-quiz" id="quiz-show">
         <div class="gradient-overlay">
             <div class="sound-wrapper">
-                <img src="icon/bgIcon2.png" alt="music">
-                <p>Sound On</p>
+                <img src="icon/bgIcon2.png" alt="music" id="sound-btn">
             </div>
             <div class="flex-wrapper">
+                <div class="result-icon">
+                    <div class="wrong-result"></div>
+                    <div class="correct-result"></div>
+                </div>
                 <div class="quiz">
                     <div class="toCenter">
                         <div class="question pull-left" id="question-container"></div>
@@ -26,9 +33,6 @@
                             <div class="tower2"></div>
                         </div>
                         <div class="main-answers pull-left" id="answer-container">
-                            <div class="answer"  id="answer" onclick="checkAnswer('A')">Answer Number One</div>
-                            <div class="answer"  id="answer" onclick="checkAnswer('B')">Answer Number One</div>
-                            <div class="answer"  id="answer" onclick="checkAnswer('C')">Answer Number ONE</div>
                         </div>
                     </div>
                 </div>
@@ -48,12 +52,38 @@
         <div class="modal">
             <h1>Congratulation!</h1>
             <h3>Quiz is completed</h3>
-            <h2>You got 2 from 5 question</h2>
+            <h2 id="score"></h2>
             <p>Don't stop to learn, keep it up!</p>
             <p>Want to learn more ? </p>
-            <div class="button"><span>Click Here!</span></div>
+            <a href="index.html"><div class="button"><span>Go To Content Page</span></div></a> 
         </div>
     </div>
+
+    <svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
+        <defs>
+            <filter id='squiggly-0'>
+            <feturbulence basefrequency='0.06' id='turbulence' numoctaves='3' result='noise' seed='0'></feturbulence>
+            <fedisplacementmap id='displacement' in2='noise' in='SourceGraphic' scale='6'></fedisplacementmap>
+            </filter>
+            <filter id='squiggly-1'>
+            <feturbulence basefrequency='0.06' id='turbulence' numoctaves='3' result='noise' seed='1'></feturbulence>
+            <fedisplacementmap in2='noise' in='SourceGraphic' scale='8'></fedisplacementmap>
+            </filter>
+            <filter id='squiggly-2'>
+            <feturbulence basefrequency='0.06' id='turbulence' numoctaves='3' result='noise' seed='2'></feturbulence>
+            <fedisplacementmap in2='noise' in='SourceGraphic' scale='6'></fedisplacementmap>
+            </filter>
+            <filter id='squiggly-3'>
+            <feturbulence basefrequency='0.06' id='turbulence' numoctaves='3' result='noise' seed='3'></feturbulence>
+            <fedisplacementmap in2='noise' in='SourceGraphic' scale='8'></fedisplacementmap>
+            </filter>
+            <filter id='squiggly-4'>
+            <feturbulence basefrequency='0.06' id='turbulence' numoctaves='3' result='noise' seed='4'></feturbulence>
+            <fedisplacementmap in2='noise' in='SourceGraphic' scale='6'></fedisplacementmap>
+            </filter>
+        </defs>
+    </svg>
+
 
 
         

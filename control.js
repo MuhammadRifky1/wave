@@ -7,8 +7,7 @@ var ball = document.getElementById('circle1'),
     ts = document.getElementById('title-section'),
     hd = document.getElementById('header'),
     title = document.getElementById('title-text'),
-    ti = document.getElementById('tower-img'),
-    tlm = new TimelineMax();
+    ti = document.getElementById('tower-img');
     
 
 
@@ -53,10 +52,4 @@ function destroyModal() {
 
 //window.onload = blow();
 
-
-var firstBtn = document.getElementById('firstBtn');
-
-window.addEventListener('click', function(){
-    
-})
 

@@ -609,6 +609,34 @@ animation-delay: 3.75s;
     margin: 0 auto;
 }
 
+.result-icon {
+    width:400px;
+    height: 400px;
+    position: absolute;
+    z-index: 3;
+}
+
+
+.result-icon .wrong-result {
+    background: url("icon/close.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+
+.result-icon .correct-result {
+    background: url("icon/correct.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+
+
+
 .gradient-overlay {
     width: 100%;
     height: 100vh;
@@ -623,11 +651,21 @@ animation-delay: 3.75s;
     overflow: hidden;
     margin: 10% 5% 0 0;
     padding-top: 15px;
-    border-top: 5px dotted #fff;
+    border-top: 7px dotted #fff;
+}
+
+.question h3 {
+    color: #fcfcfc;
+    float: left;
+    height: 100%;
+    margin-right: 5px;
+    font-size: 20px;
 }
 
 .question p {
     color: #fcfcfc;
+    font-size: 20px;
+    text-indent: 5px;
     
 }
 
@@ -639,7 +677,6 @@ animation-delay: 3.75s;
     margin-right: 5%;
     -webkit-animation: squiggly-anim 0.3s linear infinite;
             animation: squiggly-anim 0.3s linear infinite;
-
     z-index: 2;
     position: relative;
     overflow: hidden;
@@ -658,6 +695,8 @@ animation-delay: 3.75s;
     position: relative;
     left: -25%;
     bottom: -5%;
+    -webkit-animation: none;
+            animation: none;
 
 
 }
@@ -702,7 +741,7 @@ animation-delay: 3.75s;
     display: block;
     box-shadow: 0 -6px 0 #d0dfec inset;
     position: absolute;
-    content: counter(count);
+    content: counter(count, upper-alpha);
     counter-increment: count;
     background: white;
     color: rgba(0, 0, 0, 0.5);
@@ -777,13 +816,7 @@ animation-delay: 3.75s;
     position: relative;
 }
 
-.sound-wrapper {
-    position: relative;
-    left: 10vw;
-    top: 10vh;
-    width: 150px;
 
-}
 
 .container-quiz img {
     width: 31px;
@@ -792,43 +825,8 @@ animation-delay: 3.75s;
     
 }
 
-.container-quiz p {
-    font-size: 18px;
-    color: #fff;
-    float: left;
-    margin-left: 10px;
-}
 
-.modal-container {
-    width: 100%;
-    height: 100vh;
-    background: rgba(0 ,0 ,0, 0.300);
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.modal {
-    width: 35vw;
-    height: 55vh;
-    background: #fff;
-    border-radius: 20px;
-    padding-left: 20px;
-    
-}
-
-.modal-container .exit {
-    width: 40px;
-    height: 35px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-}
 
 .button {
   position: relative;
@@ -837,7 +835,6 @@ animation-delay: 3.75s;
   padding: 0;
   margin: 10px 20px 10px 0;
   text-align: center;
-  line-height: 50px;
   border-radius: 5px;
   transition: all 0.2s ;
   text-decoration: none;
@@ -850,7 +847,7 @@ animation-delay: 3.75s;
     font-family: 'Press Start 2P';
   color: #FFF;
   font-size: 1.5vw;
-  line-height: 25px;
+  line-height: 4vh;
   margin: 25px 0;
 
 }
@@ -943,13 +940,13 @@ footer {
 }
 
 .right-side {
-    width: 46vw;
+    width: 40vw;
     height: 100%;
     margin-left: 50px;
 }
 
 .right-side img {
-    width: calc(100% - 70%);
+    width: 13vw;
     margin-left: 50px;
     margin-bottom: 25px;
 
@@ -1019,16 +1016,16 @@ footer {
     height: 90%;
     overflow: hidden;
 }
-.one-third {
+.one-third-content {
     width: 30%;
     height: 100%;
     margin-left: 2%;
 }
 
-.materi .one-third p {
+.materi .one-third-content p {
     width: 100%;
     height: auto;
-    background: #fcfcfc;
+    background: rgba(255, 255, 255, 0.850);
     margin-top: 15px;
     padding: 5px;
     

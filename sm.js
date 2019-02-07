@@ -21,7 +21,6 @@ new ScrollMagic.Scene({
   triggerHook: 0
 })
 .setClassToggle(".circle", "not-visible")
-.addIndicators()
 .addTo(controller);
 
 
@@ -85,72 +84,5 @@ new ScrollMagic.Scene({
 
 
 
-// audio 
-
-// const globals = {
-//   audio: true
-// }
-
-// // Audio
-// buttonClick = new Audio('mp3/Buttonclick.mp3');
-// featured = new Audio('mp3/featured.mp3');
-// slideSlow = new Audio('mp3/slideSlow.mp3');
-// wrong = new Audio('mp3/Wrong.mp3');
-// bg = new Audio('mp3/retrogameloop.mp3');
-
-// // for button
-// function playSound(sound) {
-//   if (globals.audio) {
-
-//       sound.play(); // Play sound
-//   }
-// }
 
 
-// function playAudio(sound) {
-
-//   sound.loop = true;
-//   sound.volume = 0.7;
-//   sound.play(); // Play sound
-
-// }
-
-// new ScrollMagic.Scene({
-//   triggerElement: '#qw2',
-//   triggerHook: .6
-// })
-// .on('start', function(){
-//   playAudio(bg); 
-// })
-// .addTo(controller);
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var load = new ScrollMagic.Scene({
-//     triggerHook: 0,
-//     triggerElement: "#transition_coming"
-// })
-// .setClassToggle("#sb", "show-flex")
-// .addIndicators({
-//     name: "load",
-//     colorTrigger: "red",
-//     colorTrigger: "red"
-// })
-// .addTo(controller);
