@@ -67,9 +67,6 @@ progressRender();
 
 
 
-function destroyModal() {
-    document.getElementById('modal').style.display = "none";
-}
 
 
 
