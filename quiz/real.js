@@ -101,19 +101,23 @@ function progressRender() {
 
 function answerIsCorrect(){
     document.getElementById(runningQuestionIndex).style.backgroundColor = '#0f0';
+   // document.getElementById('correct').style.display = "inline-block";
 }
 
 function answerIsWrong(){
     document.getElementById(runningQuestionIndex).style.backgroundColor = '#f00';
+    //document.getElementById('wrong').style.display = "inline-block";
 
 }
 
 
 function checkAnswer(answer){
+   
     if(data[runningQuestionIndex].correct == answer){
         score++;
         answerIsCorrect();
         playSound(featured);
+        
     }else {
         answerIsWrong();
         playSound(wrong);
@@ -147,7 +151,7 @@ var soundBtn = document.getElementById('sound-btn'),
 
 
 const globals = {
-    audio: true
+    audio: false
 }
 
 // Audio
@@ -157,7 +161,7 @@ slideSlow = new Audio('mp3/slideSlow.mp3');
 wrong = new Audio('mp3/Wrong.mp3');
 bg = new Audio('mp3/retrogameloop.mp3');
 
-wrong.volume = 0.2;
+wrong.volume = .7;  
 // ## Create a function to play our sounds
 function playSound(sound) {
     if (globals.audio == true) {
@@ -170,7 +174,7 @@ function playAudio(sound) {
 
    
         sound.loop = true;
-        sound.volume = 0.1;
+        sound.volume = 0.7;
         sound.play(); 
 
         if(globals.audio == false){
