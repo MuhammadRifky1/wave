@@ -54,3 +54,4 @@ function destroyModal() {
 
 
 
+TweenMax.staggerTo(".waveline", 3, {})

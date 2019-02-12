@@ -325,7 +325,7 @@ animation-delay: 3.75s;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(135deg, #D6568B, #FF675B , #FF9800);
+    background: #FF9800;
 }
 
 .straightline-wrapper-tower{

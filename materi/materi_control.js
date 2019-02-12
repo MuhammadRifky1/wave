@@ -1,10 +1,10 @@
 
 // Audio
-// materiSound1 = new Audio('../mp3/dubbing/1.mp3');
-// materiSound2 = new Audio('../mp3/dubbing/2.mp3');
-// materiSound3 = new Audio('../mp3/dubbing/3.mp3');
-// materiSound4 = new Audio('../mp3/dubbing/4.mp3');
-// materiSound4_2 = new Audio('../mp3/dubbing/4_2.mp3');
+materiSound1 = new Audio('../mp3/dubbing/1.mp3');
+materiSound2 = new Audio('../mp3/dubbing/2.mp3');
+materiSound3 = new Audio('../mp3/dubbing/3.mp3');
+materiSound4 = new Audio('../mp3/dubbing/4.mp3');
+materiSound4_2 = new Audio('../mp3/dubbing/4_2.mp3');
 
 const soundSwitch = {
     audio: true
@@ -68,5 +68,18 @@ function playSound(sound) {
         
 //     }
 // })
+
+var agree = document.getElementById('agree-btn');
+var disagree = document.getElementById('disagree-btn');
+
+agree.addEventListener('click', function(){
+    console.log(123)
+    document.getElementsByClassName('modal-content-container')[0].style.display = "none";
+})
+disagree.addEventListener('click', function(){
+    document.getElementsByClassName('modal-content-container')[0].style.display = "none";
+})
+
+
 
 
