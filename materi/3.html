@@ -5,22 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css" type="text/css">
+    <script src="../gsap/TweenMax.js" type="text/javascript"></script>
+    <script src="../gsap/TimelineMax.js" type="text/javascript"></script>
     <title>Document</title>
 </head>
 <body>
+        <div class="modal-content-container">
+            <div class="modal-content">
+                <p>Do You Want To Use Audio ?</p>
+                <div class="btn btn-yes pull-left">YES</div>
+                <div class="btn btn-no pull-left">NO</div>
+            </div>
+        </div>
     <div class="materi-container">
+        <div class="btn-container">
+            <div class="prev-page-btn pull-left"></div>
+        </div>
+        <div class="sound-btn-materi">
+            <img src="../icon/bgIcon2.png" alt="music" id="sound-materi" onclick="playSound(materiSound3)">
+        </div>
+        <h2 id="tc">Sifat Gelombang Elektromagnetik</h2>
         <div class="materi">
-            <h2>Sifat Gelombang Elektromagnetik</h2>
-            <img src="../tower_white.png" alt="tower_white" width="60%" class="tower_white">
-            <div class="one-third-content pull-left">
-   
+            <div class="materi">
+            <div class="tower_white"></div>
             <p>
                 Di alam ini banyak sekali jenis gelombang, misalnya menurut arah getar dan arah rambatnya, gelombang
                 memiliki dua jenis yaitu gelombang tranversal dan longitudinal. Gelombang tranversal adalah gelombang yang
                 arah rambatnya tegak lurus arah getarnya. Sedangkan
                 gelombang longitudinal adalah gelombang yang arah
                 rambatnya sejajar arah getarnya.
-            </p>
+            </p >
             <p>
                 Kemudian menurut mediumnya, gelombang juga
                 memiliki dua jenis yaitu gelombang mekanik (membutuhkan medium) dan gelombang elektromegnetik (tidak
@@ -52,6 +66,9 @@
                 tranversal. Seperti halnya gelombang tranversal
                 lainnya, maka gelombang elektromagnetik akan
                 memiliki sifat-sifat sebagai berikut.<br/>
+                
+            </p>
+            <p>
                 a. dapat mengalami pemantulan (refleksi)<br/>
                 b. dapat mengalami pembiasan (refraksi)<br/>
                 c. dapat mengalami interferensi (gabungan atau
@@ -105,8 +122,17 @@
             <p>
                 ini gambar
             </p>
-            </div>    
+               
     </div>
-    
+    <script>
+        var p = document.getElementsByTagName('P');
+        for(i = 0; i <= p.length; i++){
+            p[i].classList.add('fade-in');
+        }
+        function audioSet(){
+            playSound(materiSound3);
+        }
+    </script>
+    <script src="materi_control.js"></script>
 </body>
 </html>
