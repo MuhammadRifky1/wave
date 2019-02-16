@@ -10,18 +10,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="modal-content-container">
+        <div class="modal-content">
+            <p>Do You Want To Use Audio ?
+                <span>Bahasa* : Mau menggunakan suara ?</span>
+            </p>
+            
+            <div class="btn btn-yes pull-left" id="agree-btn" onclick="audioSet(materiSound2)" >YES</div>
+            <div class="btn btn-no pull-left" id="disagree-btn">NO</div>
+        </div>
+    </div>
     <div class="materi-container">
         <div class="btn-container">
-            <div class="prev-page-btn pull-left"></div>
+            <a href="../index.html"><div class="prev-page-btn pull-left"></div></a>
         </div>
         <div class="sound-btn-materi">
-            <img src="../icon/bgIcon2.png" alt="music" id="sound-materi" onclick="playSound(materiSound2)">
+            <img src="../icon/bgIcon2.png" alt="music" id="sound-materi" onclick="soundCheck(materiSound2)">
         </div>
         <h2>Spektrum Gelombang Elektromagnetik</h2>
         <div class="materi">
             <div class="tower_white"></div>
-            <p>
+            <p id="fade-in">
                 Gelombang elektromagnetik ini banyak ditemukan dalam berbagai jenis dengan panjang gelombang
                 atau frekuensi berbeda tetapi memiliki sifat-sifat yang
                 sama. Penguraian gelombang elektromagnetik berdasarkan frekuensi atau panjang gelombangnya inilah yang
@@ -33,21 +42,21 @@
                 berbeda maka gelombang-gelombang itu juga memiliki
                 perbedaan sifat. 
             </p>
-            <p>
+            <p id="fade-in">
                 Berdasarkan panjang gelombang dan frekuensinya
                 gelombang-gelombang elektromagnetik itu dapat diurutkan seperti pada Gambar 9.3.
             </p>
-            <p>
+            <p id="fade-in">
                 INI GAMBAR
             </p>
-            <p>
+            <p id="fade-in">
                 Cermati spektrum gelombang elektromagnetik
                 pada Gambar 9.3 itu. Pada gambar tersebut, gelombang
                 elektromagnetik dapat diurutkan dari frekuensi terbesar:
                 Sinar - γ, Sinar -X, Ultraviolet, Cahaya tampak, Infra
                 merah, Gelombang Mikro, Gelombang TV dan Radio.
             </p>
-            <p>
+            <p id="fade-in">
                 Dari spektrum gelombang elektromagnetik dapat
                 dilihat bahwa cahaya dapat digolongkan dalam gelombang elektromagnetik. Kecepatan cahaya besarnya sama
                 dengan kecepatan gelombang elektromagnetik yang
@@ -58,15 +67,6 @@
             </p>
                     
         </div>
-    <script>
-        var p = document.getElementsByTagName('P');
-        for(i = 0; i <= p.length; i++){
-            p[i].classList.add('fade-in');
-        }
-        function audioSet(){
-            playSound(materiSound2);
-        }
-    </script>
     <script src="materi_control.js"></script>
     
 </body>

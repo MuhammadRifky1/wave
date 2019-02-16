@@ -52,6 +52,3 @@ function destroyModal() {
 
 //window.onload = blow();
 
-
-
-TweenMax.staggerTo(".waveline", 3, {})

@@ -10,18 +10,28 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="modal-content-container">
+        <div class="modal-content">
+            <p>Do You Want To Use Audio ?
+                <span>Bahasa* : Mau menggunakan suara ?</span>
+            </p>
+            
+            <div class="btn btn-yes pull-left" id="agree-btn" onclick="audioSet(materiSound4_2)" >YES</div>
+            <div class="btn btn-no pull-left" id="disagree-btn">NO</div>
+        </div>
+    </div>
     <div class="materi-container">
         <div class="btn-container">
-            <div class="prev-page-btn pull-left"></div>
+           <a href="4.html"><div class="prev-page-btn pull-left"></div></a>
         </div>
         <div class="sound-btn-materi">
-            <img src="../icon/bgIcon2.png" alt="music" id="sound-materi" onclick="playSound(materiSound4_2)">
+            <img src="../icon/bgIcon2.png" alt="music" id="sound-materi" onclick="soundCheck(materiSound4_2)">
         </div>
-        <h2>Timbulnya Gelombang Elektromagnetik</h2>
+        <h2>Jenis Jenis Gelombang Elektromagnetik</h2>
         <div class="materi">
             <div class="materi">
             <div class="tower_white"></div>
-            <p>
+            <p id="fade-in">
                 4. Cahaya Tampak
                 Mengapa kalian dapat melihat benda-benda dengan
                 jelas? Ternyata jawabnya bukan hanya mata kita dalam
@@ -32,20 +42,20 @@
                 Sebuah benda dapat terlihat karena ada cahaya yang di pantulkan oleh benda tersebut. Di bawah sinar matahari sebuah
                 bunga merah dapat terlihat karena bunga tersebut memantulkan cahaya merah dan menyerap warna yang lain.
             </p>
-            <p>
+            <p id="fade-in">
                 Cahaya tampak memiliki rentang yang pendek yaitu
                 dengan panjang gelombang 10-6 cm - 10-7 cm atau frekuensi 3 x 1014 Hz - 1015 Hz. Sesuai dengan spektrum yang
                 ada, cahaya tampak ada tujuh warna. Jika diurutkan dari
                 frekuensi terbesar (panjang gelombang terkecil) adalah
                 ungu, nilla, biru, hijau, kuning, jingga dan merah. 
             </p>
-            <p>
+            <p id="fade-in">
                 Coba kalian perhatikan Gambar 9.6. Sebuah pertunjukan musik yang spektakuler. Apakah dugaan kalian
                 tentang apa yang akan terjadi jika lampunya mati, berarti
                 tidak ada cahaya tampak. Tentu tidak spektakuler lagi.
             </p>
            
-            <p>
+            <p id="fade-in">
                 5. Sinar Inframerah
                 Seperti halnya cahaya tampak dan sinar ultraungu,
                 sinar inframerah dapat dihasilkan dari sumber yang sama
@@ -53,7 +63,7 @@
                 terjadi penembakan elektron pada atom-atom seperti gas
                 hidrogen, gas neon, dan gas-gas mulia yang lain. 
             </p>
-            <p>
+            <p id="fade-in">
                 Rentang frekuensi sinar inframerah adalah 1011 Hz
                 - 1014 Hz. Sinar inframerah dapat dimanfaatkan untuk
                 pemotretan-pemotretan permukaan bumi dari satelit.
@@ -64,7 +74,7 @@
                 dapat dianalisa berdasarkan tempat-tempat yang banyak
                 menghasilkan sinar inframerah dan tida. 
             </p>
-            <p>
+            <p id="fade-in">
                 6. Gelombang Mikro, Gelombang Televisi dan
                 Gelombang Radio
                 Kalian tentu tidak asing dengan radio, televisi, hand
@@ -72,12 +82,12 @@
                 yang dihasilkan dari sumber yang sama tetapi memiliki
                 frekuensi berbeda
             </p>
-            <p>
+            <p id="fade-in">
                 Gelombang mikro, gelombang televisi, dan gelombang radio dapat dihasilkan dari rangkaian osilator RLC
                 arus bolak-balik. Gelombang ini juga dapat dihasilkan pada
                 radiasi matahari hanya yang sampai ke bumi kecil.
             </p>
-            <p>
+            <p id="fade-in">
                 Gelombang mikro banyak dimanfaatkan sebagai
                 alat pendeteksi seperti radar. Sekarang banyak dikembangkan lagi seperti pada perabot rumah tangga mikrowave. Sedangkan gelombang televisi dan gelombang
                 radio banyak digunakan sebagai alat komunikasi. 
@@ -86,13 +96,6 @@
             </div>   
         </div>       
     </div>
-    <script>
-        var p = document.getElementsByTagName('P');
-        for(i = 0; i <= p.length; i++){
-            p[i].classList.add('fade-in');
-        }
-        
-    </script>
     <script src="materi_control.js"></script>
     
 </body>

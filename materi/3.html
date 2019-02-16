@@ -12,30 +12,33 @@
 <body>
         <div class="modal-content-container">
             <div class="modal-content">
-                <p>Do You Want To Use Audio ?</p>
-                <div class="btn btn-yes pull-left" id="agree-btn">YES</div>
+                <p>Do You Want To Use Audio ?
+                    <span>Bahasa* : Mau menggunakan suara ?</span>
+                </p>
+                
+                <div class="btn btn-yes pull-left" id="agree-btn" onclick="audioSet(materiSound3)" >YES</div>
                 <div class="btn btn-no pull-left" id="disagree-btn">NO</div>
             </div>
         </div>
     <div class="materi-container">
         <div class="btn-container">
-            <div class="prev-page-btn pull-left"></div>
+            <a href="../index.html"><div class="prev-page-btn pull-left"></div></a>
         </div>
         <div class="sound-btn-materi">
-            <img src="../icon/bgIcon2.png" alt="music" id="sound-materi" onclick="playSound(materiSound3)">
+            <img src="../icon/bgIcon2.png" alt="music" id="sound-materi" onclick="soundCheck(materiSound3)">
         </div>
         <h2 id="tc">Sifat Gelombang Elektromagnetik</h2>
         <div class="materi">
             <div class="materi">
             <div class="tower_white"></div>
-            <p>
+            <p id="fade-in">
                 Di alam ini banyak sekali jenis gelombang, misalnya menurut arah getar dan arah rambatnya, gelombang
                 memiliki dua jenis yaitu gelombang tranversal dan longitudinal. Gelombang tranversal adalah gelombang yang
                 arah rambatnya tegak lurus arah getarnya. Sedangkan
                 gelombang longitudinal adalah gelombang yang arah
                 rambatnya sejajar arah getarnya.
             </p >
-            <p>
+            <p id="fade-in">
                 Kemudian menurut mediumnya, gelombang juga
                 memiliki dua jenis yaitu gelombang mekanik (membutuhkan medium) dan gelombang elektromegnetik (tidak
                 membutuhkan medium). Dari proses pembentukannya,
@@ -46,14 +49,14 @@
                 elektromagnetik di antaranya dapat dijelaskan seperti di
                 bawah.
             </p>
-            <p>
+            <p id="fade-in">
                 1. Gelombang elektromagnetik tidak membutuhkan
                 medium dalam merambat. Dari sifat inilah dapat
                 dijelaskan mengapa gelombang elektromagnetik
                 dapat merambat dalam suatu medium maupun di
                 ruang hampa. 
             </p>
-            <p>
+            <p id="fade-in">
                 2. Gelombang elektromagnetik tidak dibelokkan
                 oleh medan listrik maupun medan magnet. Sifat
                 ini juga dapat membuktikan bahwa gelombang
@@ -61,14 +64,14 @@
                 karena medan magnet dan medan listrik hanya
                 mempengaruhi partikel yang bermuatan.
             </p>
-            <p>
+            <p id="fade-in">
                 3. Gelombang elektromagnetik termasuk gelombang
                 tranversal. Seperti halnya gelombang tranversal
                 lainnya, maka gelombang elektromagnetik akan
                 memiliki sifat-sifat sebagai berikut.<br/>
                 
             </p>
-            <p>
+            <p id="fade-in">
                 a. dapat mengalami pemantulan (refleksi)<br/>
                 b. dapat mengalami pembiasan (refraksi)<br/>
                 c. dapat mengalami interferensi (gabungan atau
@@ -76,7 +79,7 @@
                 d. dapat mengalami difraksi (pelenturan)<br/>
                 e. dapat mengalami polarisasi
             </p>
-            <p>
+            <p id="fade-in">
                 4. Semua spektrum gelombang elektromagnetik
                 memiliki kecepatan yang sama dan hanya tergantung
                 pada mediumnya.
@@ -84,55 +87,46 @@
                 kecepatan gelombang elektromagnetik sama dengan
                 kecepatan cahaya dan memenuhi persamaan berikut.
             </p>
-            <p>
+            <p id="fade-in">
                 ini gambar
             </p>
-            <p>
+            <p id="fade-in">
                 dengan μ0 = permeabilitas vakum<br/>
                 ε0 = permitivitas vakum<br/>
                 Seperti gelombang secara umum, kecepatan
                 rambat gelombang elektromagnetik juga memenuhi
                 hubungan berikut.
             </p>
-            <p>
+            <p id="fade-in">
                 ini gambar
             </p>
-            <p>
+            <p id="fade-in">
                 dengan c = cepat rambat gelombang elektromagnetik
                 di ruang hampa (udara) = 3 x 108
                 m/s
                 λ = panjang gelombang (m)
                 f = frekuensi (Hz)
             </p>
-            <p>
+            <p id="fade-in">
                 contoh soal
             </p>
-            <p>
+            <p id="fade-in">
                 Gelombang mikro memiliki frekuensi 900 MHz
                 dipancarkan dari sebuah radar. Berapakah panjang
                 gelombang mikro tersebut?
             </p>
-            <p>
+            <p id="fade-in">
                 Penyelesaian
                 f = 900 MHz = 9.108
                 Hz
                 c = 3 x 108
                 m/s
             </p>
-            <p>
+            <p id="fade-in">
                 ini gambar
             </p>
                
     </div>
-    <script>
-        var p = document.getElementsByTagName('P');
-        for(i = 0; i <= p.length; i++){
-            p[i].classList.add('fade-in');
-        }
-        function audioSet(){
-            playSound(materiSound3);
-        }
-    </script>
     <script src="materi_control.js"></script>
 </body>
 </html>

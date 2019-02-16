@@ -1,9 +1,5 @@
 var controller = new ScrollMagic.Controller();
-var materi = document.getElementById("scrollIntoView");
-materi.addEventListener('click', function(){
-  var element = document.getElementById('Materi');
-element.scrollIntoView({behavior: "smooth", block: "start"});
-});
+
 
 var tm = new TimelineMax()
 
@@ -12,9 +8,17 @@ var tm = new TimelineMax()
 
 tm
   .to("#line2", 1.5, {y: '-100%'})
-  .to("#line1", 1.5, {x: '-100%'})
-  .staggerTo(".circle" ,3 , {scale: 20, opacity: 1}, 0.1);
+  .staggerTo(".circle" ,3 , {scale: 20, opacity: 1}, 0.1,'+=.3', destroy_circle);
 
+
+function destroy_circle(){
+  var o = document.getElementsByClassName('circle');
+
+  for(i = 0; i <= o.length; i++){
+    o[i].style.display = "none"
+  }
+
+}
 
 new ScrollMagic.Scene({
   triggerElement: '#wave-trigger',
@@ -22,6 +26,7 @@ new ScrollMagic.Scene({
 })
 .setClassToggle(".circle", "not-visible")
 .addTo(controller);
+
 
 
 //materi

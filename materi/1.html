@@ -10,18 +10,28 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="modal-content-container">
+        <div class="modal-content">
+            <p>Do You Want To Use Audio ?
+                <span>Bahasa* : Mau menggunakan suara ?</span>
+            </p>
+            
+            <div class="btn btn-yes pull-left" id="agree-btn" onclick="audioSet(materiSound1)" >YES</div>
+            <div class="btn btn-no pull-left" id="disagree-btn">NO</div>
+        </div>
+    </div>
     <div class="materi-container">
         <div class="btn-container">
-            <div class="prev-page-btn pull-left"></div>
+            <a href="../index.html"><div class="prev-page-btn pull-left"></div></a>
         </div>
         <div class="sound-btn-materi">
-            <img src="../icon/bgIcon2.png" alt="music" id="sound-materi" onclick="playSound(materiSound1)">
+            <img src="../icon/bgIcon2.png" alt="music" id="sound-materi" onclick="soundCheck(materiSound1)">
         </div>
         <h2>Timbulnya Gelombang Elektromagnetik</h2>
         <div class="materi">
          <div class="tower_white"></div>
             
-            <p>
+            <p id="fade-in">
                 Seorang ilmuan fisika James Clerk Maxwell
                 (1813-1879) telah menyumbangkan pengetahuan yang
                 besar yaitu tentang gelombang elektromagnetik. Apakah
@@ -32,19 +42,19 @@
                 menimbulkan pandangan baru mengenai gelombang
                 elektromagnetik.
             </p>
-            <p>
+            <p id="fade-in">
                 Maxwell menjelaskan empat hal penting yang dapat
                 menjelaskan terjadinya gelombang elektromagnetik ini.
                 Keempat dasar itu dapat kalian perhatikan seperti berikut.
             </p>
-            <p>
+            <p id="fade-in">
                 1. Disekitar muatan timbul medan listrik.
                 Masih ingatkah kalian dengan materi listrik statis
                 di kelas IX SMP? Konsep ini menjelaskan dengan
                 lengkap tentang gaya elektrostatis dan medan listrik
                 yang dikenal dengan hukum Coulomb.
             </p>
-            <p>
+            <p id="fade-in">
                 2. Disekitar kawat berarus listrik akan timbul medan
                 magnet yang disebut Induksi Magnet. Di kelas IX SMP kalian juga sudah mempelajari
                 konsep kedua ini. Gejala ini ditemukan oleh Oersted. Penemuan itu adalah gejala menyimpangnya jarum
@@ -53,7 +63,7 @@
                 listrik. Penemuan ini juga menjelaskan bahwa ada
                 kaitan antara listrik dan medan magnet.
             </p>
-            <p>
+            <p id="fade-in">
                 3. Perubahan medan magnet dapat menimbulkan arus
                 listrik.
                 Masih ingat tentang Induksi Elektromagnetik,
@@ -63,12 +73,12 @@
                 menjelaskan bahwa medan magnet yang berubah
                 dapat menimbulkan arus listrik (medan listrik).
             </p>
-            <p>
+            <p id="fade-in">
                 4. Penemuan-penemuan di atas dapat mengembangkan
                 pandangan secara terbalik, yaitu perubahan medan
                 listrik harus menimbulkan medan magnet
             </p>
-            <p>
+            <p id="fade-in">
                 Keempat dasar di atas inilah yang oleh Maxwell
                 dikembangkan menjadi keseimbangan alam. Menurut
                 Maxwell energi yang tersimpan dalam bentuk medan
@@ -80,17 +90,17 @@
                 saling mempengaruhi dalam bentuk pancaran energi yang
                 kemudian dinamakan gelombang elektromagnetik.
             </p>
-            <p>
+            <p id="fade-in">
                 <img src="../asset/materi/1.png" alt="gambar1">
             </p>
-            <p>
+            <p id="fade-in">
                 Pada Gambar berikut dapat dijelaskan bahwa saat
                 saklar S ditutup maka akan ada arus yang mengalir pada
                 kumparan dan sampai di plat sejajar. Pada kumparan akan
                 timbul medan magnet dan pada plat sejajar akan timbul
                 medan listrik.
             </p>
-            <p>
+            <p id="fade-in">
                 Bagaimana jika saklar S dibuka dan ditutup
                 secara bergantian? Pada saat saklar dibuka dan ditutup
                 secara bergantian dengan cepat seperti induktor rumkorf
@@ -107,10 +117,10 @@
                 persamaan berikut.
                 
             </p>
-            <p>
+            <p id="fade-in">
                 <img src="../asset/materi/2.png" alt="gambar2">
             </p>
-            <p>
+            <p id="fade-in">
                 dengan : <br/>c = cepat rambat gelombang elektromagnetik (m/s)<br/>
                 Em= kuat medan listrik maksimum (N/C)<br/>
                 Bm= kuat medan magnet maksimum (tesla)
@@ -118,15 +128,6 @@
             
             
     </div>
-    <script>
-        var p = document.getElementsByTagName('P');
-        for(i = 0; i <= p.length; i++){
-            p[i].classList.add('fade-in');
-        }
-        function audioSet(){
-            playSound(materiSound1);
-        }
-    </script>
     <script src="materi_control.js"></script>
 </body>
 </html>

@@ -110,6 +110,9 @@ function answerIsWrong(){
 
 }
 
+renderQuestion();
+progressRender();
+
 
 function checkAnswer(answer){
    
@@ -138,10 +141,6 @@ function checkResult() {
 }
 
 
-renderQuestion();
-progressRender();
-
-
 
 // audio 
 var soundBtn = document.getElementById('sound-btn'),
@@ -151,7 +150,7 @@ var soundBtn = document.getElementById('sound-btn'),
 
 
 const globals = {
-    audio: false
+    audio: true
 }
 
 // Audio
@@ -164,7 +163,7 @@ bg = new Audio('mp3/retrogameloop.mp3');
 wrong.volume = .7;  
 // ## Create a function to play our sounds
 function playSound(sound) {
-    if (globals.audio == true) {
+    if (globals.audio) {
 
         sound.play(); // Play sound
     }
@@ -177,7 +176,7 @@ function playAudio(sound) {
         sound.volume = 0.7;
         sound.play(); 
 
-        if(globals.audio == false){
+        if(!globals.audio){
             sound.pause();
         }
 
@@ -204,8 +203,7 @@ var ans = document.getElementsByClassName("answer");
 
 soundBtn.addEventListener('click', function(){
     
-    
-    if (globals.audio == true) {
+    if (globals.audio) {
         Object.assign(globals, { audio: false });
         soundBtn.style.opacity = ".5";
         playAudio(bg);
@@ -252,6 +250,7 @@ soundBtn.addEventListener('click', function(){
 //     }else {
 //         answer.classList.add("wrong");
 //     }
+    
     
 // }
 

@@ -10,19 +10,29 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="modal-content-container">
+        <div class="modal-content">
+            <p>Do You Want To Use Audio ?
+                <span>Bahasa* : Mau menggunakan suara ?</span>
+            </p>
+            
+            <div class="btn btn-yes pull-left" id="agree-btn" onclick="audioSet(materiSound4)" >YES</div>
+            <div class="btn btn-no pull-left" id="disagree-btn">NO</div>
+        </div>
+    </div>
     <div class="materi-container">
         <div class="btn-container">
-            <div class="prev-page-btn pull-left"></div>
-            <div class="next-page-btn pull-left"></div>
+            <a href="../index.html"><div class="prev-page-btn pull-left"></div></a>
+            <a href="4_2.html"><div class="next-page-btn pull-left"></div></a>            
         </div>
         <div class="sound-btn-materi">
-            <img src="../icon/bgIcon2.png" alt="music" id="sound-materi" onclick="playSound(materiSound4)">
+            <img src="../icon/bgIcon2.png" alt="music" id="sound-materi" onclick="soundCheck(materiSound4)">
         </div>
         <h2>Jenis Jenis Gelombang Elektromagnetik</h2>
         <div class="materi">
             <div class="materi">
             <div class="tower_white"></div>
-            <p>
+            <p id="fade-in">
                 Sesuai dengan spektrum yang ada maka gelombang
                 elektromagnetik memiliki jenis yang cukup banyak. Setiap
                 jenisnya memiliki sifat yang spesifik terutama perbedaan
@@ -32,20 +42,20 @@
                 dapat dicermati pada penjelasan di bawah.
             </p>
                  
-            <p>
+            <p id="fade-in">
                 1. Sinar Gamma
                 Dalam spektrumnya, sinar gamma menempati
                 tingkatan dengan frekuensi terbesar yaitu 10^20 Hz - 10^25
                 Hz. Sifat yang dimiliki sinar gamma adalah energi yang
                 besar sehingga daya tembusnya sangat kuat.
             </p>
-            <p>
+            <p id="fade-in">
                 Sinar gamma ditemukan dari radiasi inti-inti atom
                 tidak stabil yang merupakan pancaran zat radioaktif. Sinar
                 gamma juga dapat di hasilkan seperti sinar X yaitu tumbukan
                 elektron dengan atom-atom berat seperti timbal (Pb).
             </p>
-            <p>
+            <p id="fade-in">
                 Sinar gamma dapat digunakan sebagai sistem
                 perunut aliran suatu fluida ( misalnya aliran PDAM ).
                 Tujuannya untuk mendeteksi adanya kebocoran pipa. Jika
@@ -53,25 +63,25 @@
                 dalam fluida maka saat terjadi kebocoran maka radiasi
                 Sinar gamma akan dapat dideteksi. 
             </p>
-            <p>
+            <p id="fade-in">
                 Sekarang sinar gamma banyak digunakan sebagai
                 bahan sterilisasi bahan makanan kaleng dan pendeteksi keretakan batang baja. Pernahkah kalian membeli
                 makanan kaleng. Jika massa berlakunya masih aman
                 maka kalian tidak usah terlalu kawatir dengan kebersihannya. Kuman atau bateri penyebab penyakitnya telah
                 disterilisasi dengan Sinar gamma.
             </p>
-            <p>
+            <p id="fade-in">
                 2. Sinar X
                 Urutan kedua gelombang elektromagnetik yang
                 frekuensinya besar adalah Sinar X. Frekuensi Sinar X
                 memiliki rentang frekuensi 10^16 Hz - 10^20 Hz. 
             </p>
-            <p>
+            <p id="fade-in">
                 Sinar X pertama kali ditemukan oleh Wilhem Conrad
                 Rontgen sehingga sering di sebut juga sinar Rontgen. Sumber sinar X yang utama adalah dari radiasi tumbukan elektron berkecepatan tinggi pada atom-atom berat
                 seperti timbal (Pb).
             </p>
-            <p>
+            <p id="fade-in">
                 Dengan berada pada rentang frekuensinya sinar
                 X juga memiliki daya tembus besar. Sinar X dapat dimanfaatkan dalam bidang radiologi yaitu mendeteksi
                 organ-organ tubuh seperti tulang, jantung, paru-paru,
@@ -82,14 +92,14 @@
                 foto organ yang normal (sehat). Jika hasilnya tidak sesuai
                 berarti ada kelainan atau ada penyakitnya. 
             </p>
-            <p>
+            <p id="fade-in">
                 3. Sinar Ultraviolet
                 Sinar Ultraviolet atau sinar Ultra Ungu merupakan
                 gelombang elektromagnetik yang memiliki frekuensi di
                 atas sinar tampak (sinar ungu) dan di bawah Sinar X.
                 Rentang frekuensi adalah antara 10^15 Hz-10^16 Hz.
             </p>
-            <p>
+            <p id="fade-in">
                 Sinar ini selain dihasilkan oleh radiasi matahari,
                 juga dapat dihasilkan dari tabung lucutan. Pada tabung
                 lucutan dapat terjadi penembakan elektron pada atomatom seperti gas Hidrogen, gas Neon, dan gas-gas mulia
@@ -98,7 +108,7 @@
                 untuk penerangan telah dirancang dengan pancaran sinar
                 Ultraviolet yang minimum.
             </p>
-            <p>
+            <p id="fade-in">
                 Sinar Ultraviolet dapat digunakan dalam teknik
                 spektroskopi yaitu untuk mengetahui kandungan unsurunsur pada suatu bahan. Dalam perkembangannya sinar
                 Ultraviolet diketahui dapat mempengaruhi kecepatan
@@ -108,13 +118,6 @@
             </p>
          
     </div>
-    <script>
-        var p = document.getElementsByTagName('P');
-        for(i = 0; i <= p.length; i++){
-            p[i].classList.add('fade-in');
-        }
-        
-    </script>
     <script src="materi_control.js"></script>
     
 </body>
