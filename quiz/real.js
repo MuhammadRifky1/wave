@@ -170,7 +170,7 @@ var soundBtn = document.getElementById('sound-btn'),
 
 
 const globals = {
-    audio: false
+    audio: true
 }
 
 // Audio

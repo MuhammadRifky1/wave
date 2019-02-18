@@ -63,7 +63,7 @@ function destroy_circle(){
     var o = document.getElementsByClassName('circle');
     for(i = 0; i <= o.length - 1; i++){
         o[i].style.display = "none";
-s    }
+    }
 }
     
 
