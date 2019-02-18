@@ -15,7 +15,7 @@ var data = [
         answerC: "Perubahan medan magnet menimbulkan hambatan",
         answerD: "Perubahan medan listrik menimbulkan medan magnet",
         answerE: "Medan magnet menimbulkan arus listrik",
-        correct: "A"
+        correct: "B"
     },
     {
         question: "Di bawah ini merupakan sifat-sifat gelombang elektromagnetik, kecuali ....",
@@ -24,7 +24,7 @@ var data = [
         answerC: "kecepatan tertinggi terjadi di ruang hampa",
         answerD: "dapat mengalami peristiwa polarisasi",
         answerE: "dapat merambat di ruang hampa",
-        correct: "A"
+        correct: "B"
     },
     {
         question: "Yang termasuk gelombang elektromagnetik adalah ....",
@@ -33,7 +33,7 @@ var data = [
         answerC: "dapat berinterferensi dan difraksi",
         answerD: "dapat dibelokkan dalam medan listrik maupun medan magnet",
         answerE: "memerlukan medium untuk perambatannya",
-        correct: "A"
+        correct: "D"
     },
     {
         question: "Urutan spektrum gelombang elektromagnetik yang benar untuk frekuensi besar ke frekuensi kecil adalah ....",
@@ -42,7 +42,7 @@ var data = [
         answerC: "cahaya biru, cahaya hijau, sinar infra merah, gelombang radar ",
         answerD: "cahaya hijau, cahaya biru, sinarX, sinar gamma",
         answerE: "sinar inframerah, sinar ultra violet, cahaya hijau, cahaya biru",
-        correct: "A"
+        correct: "E"
     },
     {
         question: "Yang fotonya mempunyai energi terbesar dari yang berikut adalah ….",
@@ -60,7 +60,7 @@ var data = [
         answerC: "3 m",
         answerD: "15 m",
         answerE: "1,5 m",
-        correct: "A"
+        correct: "C"
     },
     {
         question: "Seorang pelaut mengukur kedalaman laut dari atas kapalnya dengan mengirim gelombang elektromagnetik sampan ke dasar laut. Ternyata gelombang elektromagnetik itu kembali setelah selang waktu 5 s. Kedalaman laut tersebut adalah ....",
@@ -69,7 +69,7 @@ var data = [
         answerC: "150 m",
         answerD: "75 m",
         answerE: "7,5 m",
-        correct: "A"
+        correct: "C"
     }
 ]
 
@@ -91,6 +91,9 @@ function renderQuestion() {
     "<div class='answer'  id='answer' onclick= " + " checkAnswer('C')" + ">" + q.answerC +"</div>"+
     "<div class='answer'  id='answer' onclick= " + " checkAnswer('D')" + ">" + q.answerD +"</div>"+
     "<div class='answer'  id='answer' onclick= " + " checkAnswer('E')" + ">" + q.answerE +"</div>";
+    document.getElementById('quiz-show').style.pointerEvents = "auto"
+
+
 }
 
 function progressRender() {
@@ -101,12 +104,26 @@ function progressRender() {
 
 function answerIsCorrect(){
     document.getElementById(runningQuestionIndex).style.backgroundColor = '#0f0';
-   // document.getElementById('correct').style.display = "inline-block";
+    document.getElementById('correct').style.display = "inline-block";
+    let pointerCheck = setTimeout(function(){
+        document.getElementById('correct').style.display = "none";
+    },950)
+
+    if (pointerCheck){
+        document.getElementById('quiz-show').style.pointerEvents = "none"
+    }
 }
 
 function answerIsWrong(){
     document.getElementById(runningQuestionIndex).style.backgroundColor = '#f00';
-    //document.getElementById('wrong').style.display = "inline-block";
+    document.getElementById('wrong').style.display = "inline-block";
+    let pointerCheck = setTimeout(function(){
+        document.getElementById('wrong').style.display = "none";
+    },950)
+
+    if (pointerCheck){
+        document.getElementById('quiz-show').style.pointerEvents = "none"
+    }
 
 }
 
@@ -127,8 +144,11 @@ function checkAnswer(answer){
     }
 
     if(runningQuestionIndex < lastQuestionIndex){
-        runningQuestionIndex++;
-        renderQuestion();
+        setTimeout(function(){
+            runningQuestionIndex++;
+            renderQuestion();
+        },1000)
+        
     }
     else {
         checkResult();
@@ -150,7 +170,7 @@ var soundBtn = document.getElementById('sound-btn'),
 
 
 const globals = {
-    audio: true
+    audio: false
 }
 
 // Audio

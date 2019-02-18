@@ -18,40 +18,7 @@ function playSound(sound) {
     }
         
 }
-
-
     
-
-// startQuiz.addEventListener('click', function(){
-//     startQuiz.style.display = "none";
-//     playAudio(bg);
-// })
-
-// var ans = document.getElementsByClassName("answer");
-
-
-//     for (var i = 0; i < ans.length; i++) {
-//         ans[i].addEventListener('mouseenter', function(){
-//             playSound(buttonClick);        
-//         })
-//     }
-
-
-
-// soundBtn.addEventListener('click', function(){
-    
-    
-//     if (globals.audio == true) {
-//         Object.assign(globals, { audio: false });
-//         soundBtn.style.opacity = ".5";
-//         playAudio(bg);
-//     }else {
-//         Object.assign(globals, { audio: true });
-//         playAudio(bg);
-//         soundBtn.style.opacity = "1";
-        
-//     }
-// })
 
 function landAnimate(){
     TweenMax.staggerFrom("#fade-in", 1, {y: -25, alpha: 0, ease: Bounce.easeOut}, .3);
@@ -97,6 +64,15 @@ function soundCheck(sound) {
     }
     btnCheck();
 }
+
+function btnCheck(){
+    if (!soundSwitch.audio){
+        soundMateri.style.opacity = ".5"
+    }else {
+        soundMateri.style.opacity = "1"
+    }
+}
+
     
 
 disagree.addEventListener('click', function(){
@@ -106,13 +82,6 @@ disagree.addEventListener('click', function(){
     btnCheck();
 })
 
-function btnCheck(){
-    if (!soundSwitch.audio){
-        soundMateri.style.opacity = ".5"
-    }else {
-        soundMateri.style.opacity = "1"
-    }
-}
 
 
 

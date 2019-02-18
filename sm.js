@@ -1,24 +1,10 @@
 var controller = new ScrollMagic.Controller();
-
-
 var tm = new TimelineMax()
 
 
 
 
-tm
-  .to("#line2", 1.5, {y: '-100%'})
-  .staggerTo(".circle" ,3 , {scale: 20, opacity: 1}, 0.1,'+=.3', destroy_circle);
 
-
-function destroy_circle(){
-  var o = document.getElementsByClassName('circle');
-
-  for(i = 0; i <= o.length; i++){
-    o[i].style.display = "none"
-  }
-
-}
 
 new ScrollMagic.Scene({
   triggerElement: '#wave-trigger',
@@ -27,10 +13,7 @@ new ScrollMagic.Scene({
 .setClassToggle(".circle", "not-visible")
 .addTo(controller);
 
-
-
 //materi
-
 var horizontalSlide = new TimelineMax()
     .to('#horizontal', 1, {x: '-20%'})
     .to('#horizontal', 1, {x: '-40%'})
@@ -63,18 +46,6 @@ new ScrollMagic.Scene({
 })
 .setTween(maskingMove)
 .addTo(controller);
-
-// for(i = 1; i <= 5; i++){
-//   new ScrollMagic.Scene({
-//     triggerElement: '#horizontal-wrapper',
-//     duration: "400%",
-//     triggerHook: 0
-//   })
-//   .setPin("#horizontal")
-//   .addTo(controller);
-// }
-
-
 
 
 

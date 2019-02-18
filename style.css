@@ -107,7 +107,7 @@ body {
 }
 
 .transition-container {
-    background: #000;
+    background: #DFE0DF;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,7 +116,7 @@ body {
     height: 100vh;
     position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 10000000;
     
 }
 
@@ -133,57 +133,57 @@ h1 span{
     margin: 0 5px;
     padding: 0;
     position: relative;
-    color: #111;
+    color: rgba(175, 175, 175, 0.87);
 }
 
 h1 span:nth-child(1){
     animation-delay: 0s;
 }
 h1 span:nth-child(2){
-animation-delay: .25s;
+    animation-delay: .25s;
 }
 h1 span:nth-child(2){
-animation-delay: .5s;
+    animation-delay: .5s;
 }
 h1 span:nth-child(3){
-animation-delay: .75s;
+    animation-delay: .75s;
 }
 h1 span:nth-child(4){
-animation-delay: 1s;
+    animation-delay: 1s;
 }
 h1 span:nth-child(5){
-animation-delay: 1.25s;
+    animation-delay: 1.25s;
 }
 h1 span:nth-child(6){
-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
 h1 span:nth-child(7){
-animation-delay: 1.75s;
+    animation-delay: 1.75s;
 }
 
 h1 span:nth-child(9){
-animation-delay: 2s;
+    animation-delay: 2s;
 }
 h1 span:nth-child(10){
-animation-delay: 2.25s;
+    animation-delay: 2.25s;
 }
 h1 span:nth-child(11){
-animation-delay: 2.5s;
+    animation-delay: 2.5s;
 }
 h1 span:nth-child(12){
-animation-delay: 2.75s;
+    animation-delay: 2.75s;
 }
 h1 span:nth-child(13){
-animation-delay: 3s;
+    animation-delay: 3s;
 }
 h1 span:nth-child(14){
-animation-delay: 3.25s;
+    animation-delay: 3.25s;
 }
 h1 span:nth-child(15){
-animation-delay: 3.5s;
+    animation-delay: 3.5s;
 }
 h1 span:nth-child(16){
-animation-delay: 3.75s;
+    animation-delay: 3.75s;
 }
 
 @keyframes animate {
@@ -200,7 +200,7 @@ animation-delay: 3.75s;
     0 0 400px #ff9800   ;
 }
 5%, 95%{
-    color: #111;
+    color: rgba(175, 175, 175, 0.87);
     filter: blur(0px);
     text-shadow: none;
 }
@@ -226,6 +226,11 @@ animation-delay: 3.75s;
     position: relative;
 
 }
+
+.title-container strong {
+    text-shadow: 10px 5px 20px rgb(20, 20, 20);
+}
+
 .header {
     position: absolute;
     top: -1vh;
@@ -280,26 +285,25 @@ animation-delay: 3.75s;
 
 
 .tower {
-    width: 600px;
-    height: 450px;
-    background: url("finish.png"); 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-     -o-background-size: cover;
-    background-size: cover;
+    width: 35vw;
+    height: 50vh;
     position: absolute;
-    bottom: 0px;
-    z-index: 7;
+    background: url("finish.png") center;
+    background-size: cover;
+    z-index: 10;
+    bottom: 0;
     
     
 }
 .circle {
-    width: 200px;
-    height: 200px;
+    width: 10vw;
+    height: 10vw;
     border-radius: 50%;
     border: 7px solid #e67e22;
     position: absolute;
-    left: 60%; 
+    left: 16vw;
+    top: 1vw; 
+    z-index: 11;
     
 }
 
@@ -310,9 +314,7 @@ animation-delay: 3.75s;
 
 
 
-.title-container strong {
-    text-shadow: 10px 5px 20px rgb(20, 20, 20);
-}
+
 
 .horizontal-sroll {
     width: 500%;
@@ -332,7 +334,7 @@ animation-delay: 3.75s;
 
 .straightline-wrapper-tower{
     width: 200px;
-    height: 360px;
+    height: 50%;
     margin: 0 auto;
     position: absolute;
     bottom: 0;
@@ -616,6 +618,11 @@ animation-delay: 3.75s;
     height: 400px;
     position: absolute;
     z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
 }
 
 
@@ -626,13 +633,14 @@ animation-delay: 3.75s;
     height: 100%;
     position: absolute;
     display: none;
+    
 }
 
 .result-icon .correct-result {
     background: url("icon/correct.png");
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     position: absolute;
     display: none;
 }
@@ -1068,7 +1076,7 @@ img {
     height: auto;
     background: rgba(255, 255, 255, 0.850);
     margin: 15px 15px 0 0;
-    padding: .3em;
+    padding: .5em;
     position: relative;
     z-index: 2; 
     border-radius: 3%; 
@@ -1099,7 +1107,7 @@ img {
   position: absolute;
   width: 35%;
   height: 10%;
-  top: 41%;
+  top: 43%;
   left: 53%;
   background: #fff;
   z-index: 2;
@@ -1109,7 +1117,7 @@ img {
 }
 .next-page-btn:after {
   z-index: 3;
-  top: 63%;
+  top: 61%;
   left: 53%;
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
@@ -1144,7 +1152,7 @@ img {
   position: absolute;
   width: 35%;
   height: 10%;
-  top: 41%;
+  top: 45%;
   left: 47%;
   background: #fff;
   z-index: 2;
@@ -1192,7 +1200,11 @@ img {
     width: 35vw;
     height: 25vw;
     border-radius: 5%;
-    padding-left: 4%;
+    text-align: center;
+    display: inline-block;
+    
+
+    
 }
 
 .modal-content .btn {
@@ -1203,12 +1215,12 @@ img {
     border: 1px #b8b8b8 solid;
     font-size: 16px;
     cursor: pointer;
-    margin: 30px 0 0 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
+    margin: 10% 0 0 5%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 7vh;
+    
 
 }
 
@@ -1227,11 +1239,9 @@ img {
 }
 
 .modal-content p {
-    margin: 8% 3% 10% -7%;
+    margin: 8% 3%;
     font-size: 2.5vw;
     font-family: Retrocycles;
-    text-align: center;
-    line-height: 1em;
 
 }
 
@@ -1240,7 +1250,6 @@ img {
    font-family: arial;
    color: #888888;
 }
-
 
 @-webkit-keyframes bground {
     0% {
